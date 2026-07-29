@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- SEO Meta Tags -->
+  <title>SMR Everest | Luxury Premium Residences in Hyderabad</title>
+  <meta name="description"
+    content="SMR Everest – Premium luxury residences in Hyderabad. 4 BHK ultra-luxury apartments on 12 acres with world-class amenities. Enquire now for exclusive pricing." />
+  <meta name="keywords"
+    content="SMR Everest, luxury apartments Hyderabad, premium residences, 4 BHK flats, SMR Holdings" />
+  <meta name="author" content="SMR Holdings" />
+  <link rel="canonical" href="https://smreverest.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="SMR Everest | Luxury Premium Residences" />
+  <meta property="og:description"
+    content="Experience elevated living at SMR Everest – 12 acres of curated luxury in Hyderabad." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&q=80" />
+  <meta property="og:url" content="https://smreverest.com/" />
+  <meta property="og:site_name" content="SMR Everest" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SMR Everest | Luxury Premium Residences" />
+  <meta name="twitter:description" content="12 acres. 4 towers. 40+ amenities. Hyderabad's most exclusive address." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&q=80" />
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateListing",
+    "name": "SMR Everest",
+    "description": "Premium luxury 4 BHK residences in Hyderabad on 12 acres with 4 towers and 40+ world-class amenities.",
+    "url": "https://smreverest.com/",
+    "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&q=80",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kokapet",
+      "addressRegion": "Hyderabad",
+      "addressCountry": "IN"
+    },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>" />
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Swiper.js CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════════
+       STICKY NAVBAR
+  ═══════════════════════════════════════════════ -->
+  <nav id="navbar" class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <!-- Logo -->
+      <a href="#home" class="nav-logo" aria-label="SMR Everest Home">
+        <img src="images/SRM_logo.png" alt="SMR Vinay ICONIA" class="nav-logo-img" />
+        <div class="logo-divider"></div>
+        <div class="nexhouz-logo-badge">
+          <img src="images/NexHouz Logo.png" alt="NexHouz" class="nav-nexhouz-img" />
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-links" role="list">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#highlights" class="nav-link">Highlights</a></li>
+        <li><a href="#floorplans" class="nav-link">Floor Plans</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#location" class="nav-link">Location</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Desktop CTA -->
+      <button class="btn btn-gold nav-cta" onclick="openBookingModal('Navbar')" aria-label="Book Site Visit">
+        Book Site Visit
+      </button>
+
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"
+        aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
+      <ul role="list">
+        <li><a href="#about" class="mobile-link">About</a></li>
+        <li><a href="#highlights" class="mobile-link">Highlights</a></li>
+        <li><a href="#floorplans" class="mobile-link">Floor Plans</a></li>
+        <li><a href="#gallery" class="mobile-link">Gallery</a></li>
+        <li><a href="#location" class="mobile-link">Location</a></li>
+        <li><a href="#contact" class="mobile-link">Contact</a></li>
+        <li><button class="btn btn-gold w-full" onclick="openBookingModal('Mobile Nav')">Book Site Visit</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════
+       HERO SECTION — Full-Width Slider
+  ═══════════════════════════════════════════════ -->
+  <section id="home" class="hero-section" aria-label="Hero slider">
+    <div class="swiper hero-swiper">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="hero-slide" style="background-image: url('images/hero.webp');">
+            <div class="hero-overlay"></div>
+            <div class="hero-content" data-swiper-parallax="-300">
+              <p class="hero-label">Where Excellence Meets Elevation</p>
+              <h1 class="hero-title">SMR <span class="gold-text">Everest</span></h1>
+              <p class="hero-tagline">Hyderabad's Most Prestigious Address<br />Luxury 4 BHK Residences · Kokapet</p>
+              <div class="hero-actions">
+                <button class="btn btn-gold" onclick="openEnquiryModal('Hero - Enquire Now')"
+                  id="hero-enquire-btn">Enquire Now</button>
+                <button class="btn btn-outline-white" onclick="downloadBrochure()" id="hero-brochure-btn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 16l-5-5 1.41-1.41L11 13.17V4h2v9.17l2.59-2.58L17 11l-5 5zM4 18h16v2H4v-2z" />
+                  </svg>
+                  Download Brochure
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="hero-slide" style="background-image: url('images/hero1.webp');">
+            <div class="hero-overlay"></div>
+            <div class="hero-content" data-swiper-parallax="-300">
+              <p class="hero-label">22 Acres of Integrated Township</p>
+              <h1 class="hero-title">Live <span class="gold-text">Above</span> All</h1>
+              <p class="hero-tagline">Only 8 Homes Per Floor · G+34 Tower<br />Exclusive 4 BHK + Maid · Starting ₹4 Cr*
+              </p>
+              <div class="hero-actions">
+                <button class="btn btn-gold" onclick="openEnquiryModal('Hero - Slide 2')"
+                  id="hero-enquire-btn-2">Enquire Now</button>
+                <button class="btn btn-outline-white" onclick="downloadBrochure()" id="hero-brochure-btn-2">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 16l-5-5 1.41-1.41L11 13.17V4h2v9.17l2.59-2.58L17 11l-5 5zM4 18h16v2H4v-2z" />
+                  </svg>
+                  Download Brochure
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div><!-- /swiper-wrapper -->
+
+      <!-- Swiper Controls -->
+      <div class="swiper-button-next hero-next" aria-label="Next slide"></div>
+      <div class="swiper-button-prev hero-prev" aria-label="Previous slide"></div>
+      <div class="swiper-pagination hero-pagination" aria-label="Slide indicators"></div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator" aria-hidden="true">
+      <div class="scroll-mouse">
+        <div class="scroll-dot"></div>
+      </div>
+      <p>Scroll Down</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       ABOUT PROJECT
+  ═══════════════════════════════════════════════ -->
+  <section id="about" class="section about-section" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="section-label" data-aos="fade-up">About The Project</div>
+      <div class="about-grid">
+
+        <!-- Left: Image -->
+        <div class="about-image-wrapper" data-aos="fade-right" data-aos-delay="100">
+          <div class="about-image-frame">
+            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80"
+              alt="SMR Everest luxury residential towers" loading="lazy" class="about-img" />
+            <div class="about-badge">
+              <span class="badge-number">RERA</span>
+              <span class="badge-text">Approved</span>
+            </div>
+          </div>
+          <!-- Floating accent card -->
+          <div class="about-float-card">
+            <div class="float-icon">🏆</div>
+            <div class="float-content">
+              <strong>Award Winning</strong>
+              <span>Design Excellence 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Content -->
+        <div class="about-content" data-aos="fade-left" data-aos-delay="200">
+          <h2 id="about-heading" class="section-heading">Crafted for Those<br />Who <span class="gold-text">Demand the
+              Best</span></h2>
+          <p class="about-description">
+            SMR Everest is not merely a residence — it is a statement of arrival. Nestled in the heart of Kokapet,
+            Hyderabad's most coveted growth corridor, this iconic development redefines what luxury living truly means.
+          </p>
+          <p class="about-description">
+            With sweeping vistas, curated landscaping, and meticulous attention to every detail, SMR Everest is home to
+            480+ families who refused to compromise. Four soaring towers rise across 12 pristine acres, each residence a
+            masterwork of space, light, and artistry.
+          </p>
+
+          <!-- Key Points -->
+          <ul class="about-highlights-list">
+            <li><span class="check-icon">✦</span> RERA Registered &amp; Bank-Approved Project</li>
+            <li><span class="check-icon">✦</span> Vaastu-Compliant Floor Plans</li>
+            <li><span class="check-icon">✦</span> 3-Tier Security with AI Surveillance</li>
+            <li><span class="check-icon">✦</span> Premium Italian Marble Flooring</li>
+            <li><span class="check-icon">✦</span> Smart Home Automation Ready</li>
+          </ul>
+
+          <!-- Animated Counters -->
+          <div class="counters-grid">
+            <div class="counter-item" data-aos="zoom-in" data-aos-delay="300">
+              <span class="counter-number" data-target="12">0</span>
+              <span class="counter-suffix">+</span>
+              <p class="counter-label">Acres</p>
+            </div>
+            <div class="counter-item" data-aos="zoom-in" data-aos-delay="400">
+              <span class="counter-number" data-target="4">0</span>
+              <span class="counter-suffix"></span>
+              <p class="counter-label">Towers</p>
+            </div>
+            <div class="counter-item" data-aos="zoom-in" data-aos-delay="500">
+              <span class="counter-number" data-target="480">0</span>
+              <span class="counter-suffix">+</span>
+              <p class="counter-label">Units</p>
+            </div>
+            <div class="counter-item" data-aos="zoom-in" data-aos-delay="600">
+              <span class="counter-number" data-target="40">0</span>
+              <span class="counter-suffix">+</span>
+              <p class="counter-label">Amenities</p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /about-grid -->
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       PROJECT HIGHLIGHTS
+  ═══════════════════════════════════════════════ -->
+  <section id="highlights" class="section highlights-section" aria-labelledby="highlights-heading">
+    <div class="section-bg-pattern" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-label" data-aos="fade-up">Project Details</div>
+      <h2 id="highlights-heading" class="section-heading text-center" data-aos="fade-up" data-aos-delay="100">
+        Project <span class="gold-text">Highlights</span>
+      </h2>
+      <p class="section-subtext text-center" data-aos="fade-up" data-aos-delay="200">
+        Everything designed to exceed every expectation
+      </p>
+
+      <div class="highlights-grid">
+
+        <div class="highlight-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="highlight-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="6" y="6" width="36" height="36" rx="2" />
+              <path d="M6 18h36M18 6v36" />
+            </svg>
+          </div>
+          <h3 class="highlight-title">Land Area</h3>
+          <p class="highlight-value">12 Acres</p>
+          <p class="highlight-desc">Sprawling green campus with 70% open space</p>
+        </div>
+
+        <div class="highlight-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="highlight-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="4" y="20" width="10" height="24" rx="1" />
+              <rect x="19" y="12" width="10" height="32" rx="1" />
+              <rect x="34" y="4" width="10" height="40" rx="1" />
+            </svg>
+          </div>
+          <h3 class="highlight-title">Towers</h3>
+          <p class="highlight-value">4 Towers</p>
+          <p class="highlight-desc">Architecturally iconic, sky-touching structures</p>
+        </div>
+
+        <div class="highlight-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="highlight-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="6" y="4" width="36" height="40" rx="2" />
+              <line x1="6" y1="12" x2="42" y2="12" />
+              <line x1="6" y1="20" x2="42" y2="20" />
+              <line x1="6" y1="28" x2="42" y2="28" />
+              <line x1="6" y1="36" x2="42" y2="36" />
+            </svg>
+          </div>
+          <h3 class="highlight-title">Floors</h3>
+          <p class="highlight-value">G + 35</p>
+          <p class="highlight-desc">Panoramic city views from every level</p>
+        </div>
+
+        <div class="highlight-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="highlight-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="24" cy="24" r="18" />
+              <path d="M24 6v18l12 8" />
+            </svg>
+          </div>
+          <h3 class="highlight-title">Possession</h3>
+          <p class="highlight-value">Dec 2027</p>
+          <p class="highlight-desc">Timely delivery with quality assurance</p>
+        </div>
+
+        <div class="highlight-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="highlight-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4 44V24L24 4l20 20v20" />
+              <rect x="18" y="30" width="12" height="14" rx="1" />
+            </svg>
+          </div>
+          <h3 class="highlight-title">Clubhouse</h3>
+          <p class="highlight-value">30,000 sq.ft</p>
+          <p class="highlight-desc">Luxury clubhouse spanning multiple levels</p>
+        </div>
+
+        <div class="highlight-card" data-aos="fade-up" data-aos-delay="600">
+          <div class="highlight-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M24 4l4 8 9 1.3-6.5 6.4 1.5 9L24 24l-8 4.7 1.5-9L11 13.3l9-1.3z" />
+              <circle cx="24" cy="36" r="8" />
+            </svg>
+          </div>
+          <h3 class="highlight-title">Premium Amenities</h3>
+          <p class="highlight-value">40+ Features</p>
+          <p class="highlight-desc">World-class lifestyle amenities at your doorstep</p>
+        </div>
+
+      </div><!-- /highlights-grid -->
+    </div>
+  </section>
+
+
+
+  <!-- ═══════════════════════════════════════════════
+       FLOOR PLANS — Lead Gated
+  ═══════════════════════════════════════════════ -->
+  <section id="floorplans" class="section floorplans-section" aria-labelledby="fp-heading">
+    <div class="container">
+      <div class="section-label" data-aos="fade-up">Residences</div>
+      <h2 id="fp-heading" class="section-heading text-center" data-aos="fade-up" data-aos-delay="100">
+        Floor <span class="gold-text">Plans</span>
+      </h2>
+      <p class="section-subtext text-center" data-aos="fade-up" data-aos-delay="200">
+        Register your interest to unlock exclusive floor plans
+      </p>
+
+      <div class="floorplans-grid">
+
+        <!-- 3 BHK Standard -->
+        <div class="fp-card" data-aos="fade-up" data-aos-delay="100" data-plan="3 BHK Standard" data-index="0">
+          <div class="fp-card-header">
+            <span class="fp-type">3 BHK</span>
+            <span class="fp-badge">Standard</span>
+          </div>
+          <div class="fp-image-wrap" onclick="openFloorPlanModal(this)" data-plan="3 BHK Standard" data-index="0">
+            <img src="images/floor_plan.jpg" alt="4 BHK 3225 Sq.Ft Floor Plan" loading="lazy" class="fp-img locked"
+              id="fp-img-0" />
+            <div class="fp-blur-overlay" id="fp-blur-0">
+              <div class="fp-blur-content">
+                <div class="fp-lock-icon">🔒</div>
+                <p>Unlock Floor Plan</p>
+              </div>
+            </div>
+          </div>
+          <div class="fp-card-body">
+            <p class="fp-area">2,250 sq.ft – 2,450 sq.ft</p>
+            <p class="fp-desc">Spacious 3 BHK with dedicated study and staff quarter</p>
+            <button class="btn btn-gold fp-unlock-btn" onclick="openFloorPlanModal(this)" data-plan="3 BHK Standard"
+              data-index="0" id="fp-btn-0">
+              View Floor Plan
+            </button>
+          </div>
+        </div>
+
+        <!-- 3 BHK Premium -->
+        <div class="fp-card" data-aos="fade-up" data-aos-delay="200" data-plan="3 BHK Premium" data-index="1">
+          <div class="fp-card-header">
+            <span class="fp-type">3 BHK</span>
+            <span class="fp-badge fp-badge-gold">Premium</span>
+          </div>
+          <div class="fp-image-wrap" onclick="openFloorPlanModal(this)" data-plan="3 BHK Premium" data-index="1">
+            <img src="images/floor_plan.jpg" alt="4 BHK 3285 Sq.Ft Floor Plan" loading="lazy" class="fp-img locked"
+              id="fp-img-1" />
+            <div class="fp-blur-overlay" id="fp-blur-1">
+              <div class="fp-blur-content">
+                <div class="fp-lock-icon">🔒</div>
+                <p>Unlock Floor Plan</p>
+              </div>
+            </div>
+          </div>
+          <div class="fp-card-body">
+            <p class="fp-area">2,600 sq.ft – 2,800 sq.ft</p>
+            <p class="fp-desc">Premium 3 BHK with butler's pantry and sky terrace</p>
+            <button class="btn btn-gold fp-unlock-btn" onclick="openFloorPlanModal(this)" data-plan="3 BHK Premium"
+              data-index="1" id="fp-btn-1">
+              View Floor Plan
+            </button>
+          </div>
+        </div>
+
+        <!-- 4 BHK Luxury -->
+        <div class="fp-card" data-aos="fade-up" data-aos-delay="300" data-plan="4 BHK Luxury" data-index="2">
+          <div class="fp-card-header">
+            <span class="fp-type">4 BHK</span>
+            <span class="fp-badge fp-badge-black">Luxury</span>
+          </div>
+          <div class="fp-image-wrap" onclick="openFloorPlanModal(this)" data-plan="4 BHK Luxury" data-index="2">
+            <img src="images/floor_plan.jpg" alt="4 BHK 3405 Sq.Ft Floor Plan" loading="lazy" class="fp-img locked"
+              id="fp-img-2" />
+            <div class="fp-blur-overlay" id="fp-blur-2">
+              <div class="fp-blur-content">
+                <div class="fp-lock-icon">🔒</div>
+                <p>Unlock Floor Plan</p>
+              </div>
+            </div>
+          </div>
+          <div class="fp-card-body">
+            <p class="fp-area">3,200 sq.ft – 3,600 sq.ft</p>
+            <p class="fp-desc">Ultra-luxury 4 BHK with private pool deck and home theatre</p>
+            <button class="btn btn-gold fp-unlock-btn" onclick="openFloorPlanModal(this)" data-plan="4 BHK Luxury"
+              data-index="2" id="fp-btn-2">
+              View Floor Plan
+            </button>
+          </div>
+        </div>
+
+        <!-- 4 BHK Ultra Premium -->
+        <div class="fp-card" data-aos="fade-up" data-aos-delay="400" data-plan="4 BHK Ultra Premium Penthouse" data-index="3">
+          <div class="fp-card-header">
+            <span class="fp-type">Penthouse</span>
+            <span class="fp-badge fp-badge-gold">Ultra Premium</span>
+          </div>
+          <div class="fp-image-wrap" onclick="openFloorPlanModal(this)" data-plan="4 BHK Ultra Premium Penthouse" data-index="3">
+            <img src="images/floor_plan.jpg" alt="4 BHK 3550 Sq.Ft Floor Plan" loading="lazy" class="fp-img locked"
+              id="fp-img-3" />
+            <div class="fp-blur-overlay" id="fp-blur-3">
+              <div class="fp-blur-content">
+                <div class="fp-lock-icon">🔒</div>
+                <p>Unlock Floor Plan</p>
+              </div>
+            </div>
+          </div>
+          <div class="fp-card-body">
+            <p class="fp-area">5,000+ sq.ft</p>
+            <p class="fp-desc">Exclusive duplex penthouse with rooftop terrace and infinity pool</p>
+            <button class="btn btn-gold fp-unlock-btn" onclick="openFloorPlanModal(this)"
+              data-plan="4 BHK Ultra Premium Penthouse" data-index="3" id="fp-btn-3">
+              View Floor Plan
+            </button>
+          </div>
+        </div>
+
+      </div><!-- /floorplans-grid -->
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       GALLERY — Masonry Layout
+  ═══════════════════════════════════════════════ -->
+  <section id="gallery" class="section gallery-section" aria-labelledby="gallery-heading">
+    <div class="section-bg-pattern" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-label" data-aos="fade-up">Visual Tour</div>
+      <h2 id="gallery-heading" class="section-heading text-center" data-aos="fade-up" data-aos-delay="100">
+        Project <span class="gold-text">Gallery</span>
+      </h2>
+      <p class="section-subtext text-center" data-aos="fade-up" data-aos-delay="200">
+        Glimpse the elegance of SMR Everest
+      </p>
+
+      <div class="gallery-grid" id="galleryGrid" data-aos="fade-up" data-aos-delay="300">
+
+        <div class="gallery-item" onclick="openLightbox(0)">
+          <img src="images/imgi_6_1.jpg" alt="SMR Everest exterior view" loading="lazy" />
+          <div class="gallery-overlay"><span>Exterior View</span></div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(1)">
+          <img src="images/imgi_30_3.webp" alt="Community amenities" loading="lazy" />
+          <div class="gallery-overlay"><span>Aerial View & Township</span></div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(2)">
+          <img src="images/imgi_8_4.webp" alt="Luxury living spaces" loading="lazy" />
+          <div class="gallery-overlay"><span>Luxury Living Spaces</span></div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(3)">
+          <img src="images/imgi_29_1.webp" alt="Premium interiors" loading="lazy" />
+          <div class="gallery-overlay"><span>Premium Interiors</span></div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(4)">
+          <img src="images/imgi_9_5.webp" alt="Landscaped surroundings" loading="lazy" />
+          <div class="gallery-overlay"><span>Landscaped Surroundings</span></div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(5)">
+          <img src="images/imgi_3_Entry-plaza.webp" alt="Grand Entry Plaza" loading="lazy" />
+          <div class="gallery-overlay"><span>Grand Entry Plaza</span></div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(6)">
+          <img src="images/imgi_10_6.webp" alt="Clubhouse facilities" loading="lazy" />
+          <div class="gallery-overlay"><span>Clubhouse Facilities</span></div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(7)">
+          <img src="images/imgi_11_1.webp" alt="Sports courts" loading="lazy" />
+          <div class="gallery-overlay"><span>Sports Courts</span></div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(8)">
+          <img src="images/imgi_33_6.webp" alt="Green open spaces" loading="lazy" />
+          <div class="gallery-overlay"><span>75% Open Green Spaces</span></div>
+        </div>
+
+      </div><!-- /gallery-grid -->
+
+      <div class="gallery-cta" data-aos="fade-up">
+        <button class="btn btn-outline-gold" onclick="openEnquiryModal('Gallery CTA')" id="gallery-enquire-btn">Schedule
+          a Site Visit</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Custom Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox" style="display:none;">
+    <div class="lightbox-backdrop" onclick="closeLightbox()"></div>
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close lightbox">&times;</button>
+    <button class="lightbox-prev" onclick="lightboxPrev()" aria-label="Previous image">&#8249;</button>
+    <button class="lightbox-next" onclick="lightboxNext()" aria-label="Next image">&#8250;</button>
+    <div class="lightbox-content">
+      <img id="lightboxImg" src="" alt="" class="lightbox-img" />
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+      <div class="lightbox-counter" id="lightboxCounter"></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       LOCATION
+  ═══════════════════════════════════════════════ -->
+  <section id="location" class="section location-section" aria-labelledby="location-heading">
+    <div class="container">
+      <div class="section-label" data-aos="fade-up">Connectivity</div>
+      <h2 id="location-heading" class="section-heading text-center" data-aos="fade-up" data-aos-delay="100">
+        Prime <span class="gold-text">Location</span>
+      </h2>
+      <p class="section-subtext text-center" data-aos="fade-up" data-aos-delay="200">
+        Kondapur — Hyderabad's most connected luxury address
+      </p>
+
+      <div class="location-grid">
+
+        <!-- Map -->
+        <div class="location-map" data-aos="fade-right" data-aos-delay="200">
+          <iframe id="google-map"
+            src="https://maps.google.com/maps?q=Tower%20Everest%2C%20SMR%20VINAY%20ICONIA%2C%20Sri%20Maruthi%20Nagar%20Colony%2C%20Serilingampalle%20(M)%2C%20Telangana%20500019&t=&z=17&ie=UTF8&iwloc=&output=embed"
+            width="100%" height="450" style="border:0; border-radius:16px;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="Tower Everest, SMR VINAY ICONIA Location Map"></iframe>
+        </div>
+
+        <!-- Landmarks -->
+        <div class="location-info" data-aos="fade-left" data-aos-delay="300">
+          <h3 class="location-title">Nearby Landmarks</h3>
+          <div class="landmark-list">
+
+            <div class="landmark-item">
+              <div class="landmark-icon metro">🚇</div>
+              <div class="landmark-content">
+                <strong>Raidurg Metro Station</strong>
+                <span>5 min · 2.5 km</span>
+              </div>
+            </div>
+
+            <div class="landmark-item">
+              <div class="landmark-icon school">🏫</div>
+              <div class="landmark-content">
+                <strong>Delhi Public School</strong>
+                <span>8 min · 3.5 km</span>
+              </div>
+            </div>
+
+            <div class="landmark-item">
+              <div class="landmark-icon hospital">🏥</div>
+              <div class="landmark-content">
+                <strong>Yashoda Super Specialty Hospital</strong>
+                <span>12 min · 5 km</span>
+              </div>
+            </div>
+
+            <div class="landmark-item">
+              <div class="landmark-icon it">💼</div>
+              <div class="landmark-content">
+                <strong>Nanakramguda IT Hub</strong>
+                <span>10 min · 4 km</span>
+              </div>
+            </div>
+
+            <div class="landmark-item">
+              <div class="landmark-icon airport">✈️</div>
+              <div class="landmark-content">
+                <strong>Rajiv Gandhi International Airport</strong>
+                <span>30 min · 22 km</span>
+              </div>
+            </div>
+
+            <div class="landmark-item">
+              <div class="landmark-icon mall">🛍️</div>
+              <div class="landmark-content">
+                <strong>Sarath City Capital Mall</strong>
+                <span>15 min · 7 km</span>
+              </div>
+            </div>
+
+          </div><!-- /landmark-list -->
+
+          <button class="btn btn-gold mt-2" onclick="openEnquiryModal('Location Section')" id="location-enquire-btn">
+            Get Directions
+          </button>
+        </div>
+
+      </div><!-- /location-grid -->
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       CONTACT
+  ═══════════════════════════════════════════════ -->
+  <section id="contact" class="section contact-section" aria-labelledby="contact-heading">
+    <div class="section-bg-pattern" aria-hidden="true"></div>
+    <div class="container">
+      <div class="section-label" data-aos="fade-up">Get In Touch</div>
+      <h2 id="contact-heading" class="section-heading text-center" data-aos="fade-up" data-aos-delay="100">
+        Contact <span class="gold-text">Us</span>
+      </h2>
+      <p class="section-subtext text-center" data-aos="fade-up" data-aos-delay="200">
+        Our luxury consultants are ready to assist you
+      </p>
+
+      <div class="contact-wrapper" data-aos="fade-up" data-aos-delay="300">
+
+        <!-- Contact Info Cards -->
+        <div class="contact-info">
+          <div class="contact-card">
+            <div class="contact-icon">📍</div>
+            <div class="contact-detail">
+              <strong>Address</strong>
+              <span>SMR Everest, Kokapet,<br />Hyderabad – 500 075, Telangana</span>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">📞</div>
+            <div class="contact-detail">
+              <strong>Phone</strong>
+              <span><a href="tel:+919885858529">+91 98858 58529</a></span>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">✉️</div>
+            <div class="contact-detail">
+              <strong>Email</strong>
+              <span><a href="mailto:sales@smreverest.com">sales@smreverest.com</a></span>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">🕐</div>
+            <div class="contact-detail">
+              <strong>Sales Office Hours</strong>
+              <span>Mon – Sun: 10:00 AM – 7:00 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form class="contact-form" id="contactForm" novalidate aria-label="Contact form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contact-name">Full Name *</label>
+              <input type="text" id="contact-name" name="name" placeholder="Your full name" required
+                autocomplete="name" />
+              <span class="field-error" id="contact-name-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="contact-phone">Phone Number *</label>
+              <input type="tel" id="contact-phone" name="phone" placeholder="10-digit mobile number" required
+                autocomplete="tel" maxlength="10" />
+              <span class="field-error" id="contact-phone-error"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Email Address *</label>
+            <input type="email" id="contact-email" name="email" placeholder="your@email.com" required
+              autocomplete="email" />
+            <span class="field-error" id="contact-email-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" placeholder="Tell us about your requirement..."
+              rows="4"></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold btn-full" id="contact-submit-btn">
+            <span id="contact-btn-text">Send Message</span>
+            <span id="contact-btn-loader" style="display:none;">Sending...</span>
+          </button>
+
+          <div class="form-success" id="contactSuccess" style="display:none;" role="status">
+            <div class="success-icon">✓</div>
+            <strong>Message Received!</strong>
+            <p>Our luxury consultant will reach out within 24 hours.</p>
+          </div>
+        </form>
+
+      </div><!-- /contact-wrapper -->
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+
+          <!-- Brand -->
+          <div class="footer-col footer-brand">
+            <a href="#home" class="footer-logo" aria-label="SMR Everest">
+              <img src="images/SRM_logo.png" alt="SMR Vinay ICONIA" class="footer-logo-img" />
+              <div class="logo-divider footer-divider"></div>
+              <div class="nexhouz-logo-badge">
+                <img src="images/NexHouz Logo.png" alt="NexHouz" class="footer-nexhouz-img" />
+              </div>
+            </a>
+            <p class="footer-tagline">Elevating lives above the ordinary. Hyderabad's most prestigious address for the
+              discerning few.</p>
+            <div class="social-links">
+              <a href="#" class="social-link" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+                </svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                </svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Twitter/X">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+              </a>
+              <a href="#" class="social-link" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
+              <a href="https://wa.me/918886000555" class="social-link" aria-label="WhatsApp" target="_blank"
+                rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-col">
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="#about">About Project</a></li>
+              <li><a href="#highlights">Highlights</a></li>
+              <li><a href="#amenities">Amenities</a></li>
+              <li><a href="#masterplan">Master Plan</a></li>
+              <li><a href="#floorplans">Floor Plans</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="footer-col">
+            <h4 class="footer-heading">Contact</h4>
+            <address class="footer-address">
+              <p>SMR Vinay ICONIA — Everest Tower<br />146, Masjid Banda Main Rd,<br />Kondapur, Hyderabad – 500084</p>
+              <p><a href="tel:+919885858529">+91 98858 58529</a></p>
+              <p><a href="https://wa.me/918585854853" target="_blank" rel="noopener">WhatsApp: +91 85858 54853</a></p>
+              <p><a href="mailto:Info@nexhouz.com">Info@nexhouz.com</a></p>
+            </address>
+          </div>
+
+          <!-- RERA & Legal -->
+          <div class="footer-col">
+            <h4 class="footer-heading">Legal</h4>
+            <ul class="footer-links">
+              <li><a href="#">RERA Certificate</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Use</a></li>
+              <li><a href="#">Disclaimer</a></li>
+            </ul>
+            <div class="rera-box">
+              <p class="rera-label">RERA No.</p>
+              <p class="rera-number">P02400004567</p>
+            </div>
+          </div>
+
+        </div><!-- /footer-grid -->
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2025 SMR Everest. All rights reserved. | Developed by SMR Holdings Pvt. Ltd.</p>
+        <p class="footer-disclaimer">This website is for informational purposes only. Prices and specifications are
+          subject to change without notice. Please refer to RERA documents for complete details.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════
+       FLOATING BUTTONS
+  ═══════════════════════════════════════════════ -->
+  <div class="floating-btns" id="floatingBtns" aria-label="Quick contact buttons">
+    <a href="tel:+919885858529" class="float-btn call-btn" id="float-call-btn" title="Call Now" aria-label="Call Now">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+      </svg>
+      <span>Call Now</span>
+    </a>
+    <a href="https://wa.me/918585854853?text=Hi%2C%20I%27m%20interested%20in%20SMR%20Everest"
+      class="float-btn whatsapp-btn" id="float-whatsapp-btn" target="_blank" rel="noopener" title="WhatsApp"
+      aria-label="WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+      </svg>
+      <span>WhatsApp</span>
+    </a>
+    <button class="float-btn visit-btn" onclick="openBookingModal('Floating Button')" id="float-visit-btn"
+      title="Book Site Visit" aria-label="Book Site Visit">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zm0-13H5V6h14v1zM7 11h5v5H7z" />
+      </svg>
+      <span>Book Visit</span>
+    </button>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       FULL FLOOR PLAN IMAGE VIEWER MODAL
+  ═══════════════════════════════════════════════ -->
+  <div class="modal-overlay" id="fpImageModal" role="dialog" aria-modal="true" aria-labelledby="fpFullTitle" style="display:none;">
+    <div class="fp-modal-card glass-card">
+      <button class="modal-close" onclick="closeFullFloorPlanViewer()" aria-label="Close floor plan viewer">&times;</button>
+      <div class="fp-modal-header">
+        <h3 id="fpFullTitle" class="gold-text">Floor Plan Layout</h3>
+        <p>SMR Vinay ICONIA — Everest Tower</p>
+      </div>
+      <div class="fp-modal-body">
+        <img id="fpFullImg" src="images/floor_plan.jpg" alt="Floor Plan Layout Full" />
+      </div>
+    </div>
+  </div>
+  <div class="modal-overlay" id="leadModal" role="dialog" aria-modal="true" aria-labelledby="lead-modal-title"
+    style="display:none;">
+    <div class="modal-card glass-card" id="leadModalCard">
+      <button class="modal-close" onclick="closeLeadModal()" aria-label="Close modal">&times;</button>
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <div class="modal-logo">▲ SMR EVEREST</div>
+        <h2 class="modal-title" id="lead-modal-title">Unlock Exclusive Access</h2>
+        <p class="modal-subtitle" id="lead-modal-subtitle">Enter your details to view the floor plan</p>
+      </div>
+
+      <!-- Form -->
+      <form id="leadForm" novalidate aria-label="Lead capture form">
+        <input type="hidden" id="lead-source" name="source" value="Floor Plan Modal" />
+        <input type="hidden" id="lead-floor-plan" name="floorPlan" value="" />
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="lead-name">Full Name *</label>
+            <input type="text" id="lead-name" name="name" placeholder="Your full name" required autocomplete="name" />
+            <span class="field-error" id="lead-name-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="lead-phone">Mobile Number *</label>
+            <input type="tel" id="lead-phone" name="phone" placeholder="10-digit number" required maxlength="10"
+              autocomplete="tel" />
+            <span class="field-error" id="lead-phone-error"></span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="lead-email">Email Address *</label>
+          <input type="email" id="lead-email" name="email" placeholder="your@email.com" required autocomplete="email" />
+          <span class="field-error" id="lead-email-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="lead-city">City *</label>
+          <input type="text" id="lead-city" name="city" placeholder="Your city" required
+            autocomplete="address-level2" />
+          <span class="field-error" id="lead-city-error"></span>
+        </div>
+
+        <button type="submit" class="btn btn-gold btn-full" id="lead-submit-btn">
+          <span id="lead-btn-text">Unlock Floor Plan</span>
+          <span id="lead-btn-loader" class="btn-loader" style="display:none;">
+            <span class="spinner"></span> Submitting...
+          </span>
+        </button>
+
+        <p class="modal-privacy">🔒 Your details are safe. We never spam.</p>
+      </form>
+
+      <!-- Success State -->
+      <div class="modal-success" id="leadSuccess" style="display:none;" role="status">
+        <div class="success-animation">
+          <div class="success-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+          </div>
+        </div>
+        <h3>Access Granted!</h3>
+        <p>Your floor plan has been unlocked. Our consultant will call you within 30 minutes.</p>
+        <button class="btn btn-gold mt-1" onclick="handleLeadSuccessClick()" id="lead-success-close-btn">View Floor Plan</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" onclick="scrollToTop()" aria-label="Back to top" title="Back to top">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" />
+    </svg>
+  </button>
+
+  <!-- ═══════════════════════════════════════════════
+       SCRIPTS
+  ═══════════════════════════════════════════════ -->
+  <!-- Swiper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+  <!-- Custom Scripts -->
+  <script src="assets/js/counters.js" defer></script>
+  <script src="assets/js/gallery.js" defer></script>
+  <script src="assets/js/forms.js" defer></script>
+  <script src="assets/js/slider.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+
+</body>
+
+</html>

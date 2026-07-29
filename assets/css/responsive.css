@@ -1,0 +1,354 @@
+/* ═══════════════════════════════════════════════════════════════
+   SMR EVEREST — Responsive Styles
+   Breakpoints: 1200px | 992px | 768px | 576px
+═══════════════════════════════════════════════════════════════ */
+
+/* ─── Large Desktop (1200px – 1440px) ─── */
+@media (max-width: 1280px) {
+  :root {
+    --container-px: 32px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  }
+}
+
+/* ─── Medium Desktop / Large Tablet (992px – 1200px) ─── */
+@media (max-width: 1200px) {
+  :root {
+    --section-py: 80px;
+  }
+
+  .about-grid {
+    gap: 52px;
+  }
+
+  .amenities-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer-brand .footer-tagline { max-width: 100%; }
+}
+
+/* ─── Tablet (768px – 992px) ─── */
+@media (max-width: 992px) {
+  :root {
+    --section-py: 72px;
+    --container-px: 24px;
+  }
+
+  /* Navbar */
+  .nav-links,
+  .nav-cta {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* About */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .about-image-frame {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .about-img { height: 420px; }
+
+  .about-float-card {
+    bottom: -20px;
+    left: 16px;
+  }
+
+  .counters-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Highlights */
+  .highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Amenities */
+  .amenities-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Floor Plans */
+  .floorplans-grid {
+    grid-template-columns: 1fr;
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  /* Gallery */
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .gallery-item {
+    height: 240px;
+  }
+
+  /* Location */
+  .location-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .location-map iframe { height: 380px; }
+
+  /* Contact */
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  /* Hero */
+  .hero-content { padding: 0 40px; }
+
+  .hero-title { font-size: clamp(40px, 6vw, 72px); }
+}
+
+/* ─── Mobile Landscape / Small Tablet (576px – 768px) ─── */
+@media (max-width: 768px) {
+  :root {
+    --section-py: 60px;
+    --navbar-h: 68px;
+  }
+
+  .section-heading {
+    font-size: clamp(28px, 6vw, 42px);
+  }
+
+  /* Hero */
+  .hero-content {
+    padding: 0 24px;
+    max-width: 100%;
+  }
+
+  .hero-title { font-size: clamp(36px, 8vw, 56px); }
+
+  .hero-tagline { font-size: 15px; }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 12px;
+    max-width: 280px;
+  }
+
+  .hero-actions .btn { width: 100%; justify-content: center; }
+
+  .hero-next,
+  .hero-prev {
+    display: none !important;
+  }
+
+  .scroll-indicator { display: none; }
+
+  /* About */
+  .about-image-wrapper { padding-bottom: 36px; }
+  .about-float-card { display: none; }
+  .about-img { height: 340px; }
+
+  .counters-grid { grid-template-columns: repeat(2, 1fr); }
+  .counter-number { font-size: 32px; }
+
+  /* Highlights */
+  .highlights-grid { grid-template-columns: 1fr; max-width: 380px; margin: 0 auto; }
+
+  /* Amenities */
+  .amenities-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+  /* Gallery */
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 180px;
+    gap: 10px;
+  }
+
+  .gallery-item.tall { grid-row: span 1; }
+
+  /* Forms */
+  .form-row { grid-template-columns: 1fr; }
+
+  /* Contact Form */
+  .contact-form { padding: 28px 20px; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+
+  .footer-top { padding: 48px 0 40px; }
+
+  /* Master Plan */
+  .mp-btn span { display: none; }
+
+  /* Floating Buttons */
+  .floating-btns { right: 14px; bottom: 70px; }
+  .float-btn { width: 46px; height: 46px; }
+  .float-btn:hover span { max-width: 0; margin-right: 0; }
+  .float-btn:hover { width: 46px; padding-right: 0; }
+  .float-btn svg { margin: 0 12px; }
+
+  /* Back to top */
+  .back-to-top { right: 14px; bottom: 18px; width: 40px; height: 40px; }
+}
+
+/* ─── Mobile Portrait (< 576px) ─── */
+@media (max-width: 576px) {
+  :root {
+    --section-py: 52px;
+    --container-px: 18px;
+  }
+
+  /* Navbar */
+  .logo-smr { font-size: 15px; }
+  .logo-everest { font-size: 9px; }
+
+  /* Hero */
+  .hero-section { min-height: 100svh; }
+  .hero-title { font-size: clamp(32px, 9vw, 48px); }
+  .hero-label { font-size: 10px; }
+
+  /* About */
+  .about-img { height: 280px; }
+  .about-badge { display: none; }
+
+  /* Highlights */
+  .highlight-card { padding: 26px 18px; }
+
+  /* Amenities */
+  .amenities-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .amenity-card { padding: 22px 14px; }
+  .amenity-icon { font-size: 32px; }
+
+  /* Floor Plans */
+  .fp-image-wrap { height: 220px; }
+  .floorplans-grid { grid-template-columns: 1fr; }
+
+  /* Gallery */
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .gallery-item {
+    height: 220px;
+  }
+
+  /* Location */
+  .location-map iframe { height: 300px; }
+
+  /* Modal */
+  .modal-card { padding: 32px 22px; border-radius: 20px; }
+  .modal-title { font-size: 22px; }
+
+  /* Contact info */
+  .contact-info { gap: 12px; }
+  .contact-card { padding: 14px; }
+
+  /* Section labels */
+  .section-label { font-size: 10px; letter-spacing: 2px; }
+
+  /* Footer */
+  .footer-grid { gap: 24px; }
+
+  /* Counters */
+  .counter-number { font-size: 28px; }
+  .counter-suffix { font-size: 22px; }
+}
+
+/* ─── Very Small Devices (< 375px) ─── */
+@media (max-width: 375px) {
+  .amenities-grid { grid-template-columns: 1fr; }
+
+  .hero-title { font-size: 30px; }
+
+  .section-heading { font-size: 26px; }
+
+  .btn {
+    padding: 12px 22px;
+    font-size: 12px;
+  }
+}
+
+/* ─── Touch Device Optimizations ─── */
+@media (hover: none) {
+  /* Remove hover-only effects on touch */
+  .masterplan-overlay { opacity: 1; }
+  .gallery-overlay { opacity: 1; background: linear-gradient(0deg, rgba(0,0,0,0.4) 0%, transparent 50%); }
+  .float-btn:hover { width: 52px; padding-right: 0; }
+  .float-btn:hover span { max-width: 0; }
+}
+
+/* ─── Print Styles ─── */
+@media print {
+  .navbar,
+  .floating-btns,
+  .back-to-top,
+  .hero-actions,
+  .fp-blur-overlay,
+  .contact-form,
+  .modal-overlay,
+  .lightbox {
+    display: none !important;
+  }
+
+  .hero-section { height: auto; min-height: unset; }
+  .hero-content { color: #000; }
+  .hero-overlay { display: none; }
+  .section { padding: 40px 0; }
+}
+
+/* ─── High Contrast Mode ─── */
+@media (prefers-contrast: high) {
+  :root {
+    --gold: #B8860B;
+    --text-muted: #555;
+  }
+}
+
+/* ─── Reduced Motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .hero-label,
+  .hero-title,
+  .hero-tagline,
+  .hero-actions {
+    opacity: 1;
+    animation: none;
+  }
+
+  .swiper-slide-active .hero-slide {
+    transform: none;
+  }
+}

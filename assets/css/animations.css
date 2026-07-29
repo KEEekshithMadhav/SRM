@@ -1,0 +1,307 @@
+/* ═══════════════════════════════════════════════════════════════
+   SMR EVEREST — Animations & Keyframes
+═══════════════════════════════════════════════════════════════ */
+
+/* ─── Hero Animations ─── */
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ─── Scroll Indicator ─── */
+@keyframes scrollBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(6px); }
+}
+
+@keyframes scrollDot {
+  0% { opacity: 1; transform: translateY(0); }
+  80% { opacity: 0; transform: translateY(12px); }
+  100% { opacity: 0; transform: translateY(0); }
+}
+
+/* ─── Fade In ─── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ─── Fade In Up ─── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ─── Fade In Left ─── */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ─── Fade In Right ─── */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ─── Scale In ─── */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ─── Modal Slide In ─── */
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* ─── Success Pop ─── */
+@keyframes successPop {
+  0% { transform: scale(0); }
+  70% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+/* ─── Spin (Loader) ─── */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ─── Pulse Glow ─── */
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(200, 155, 60, 0.4); }
+  50% { box-shadow: 0 0 0 12px rgba(200, 155, 60, 0); }
+}
+
+/* ─── Float Card ─── */
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* ─── Shimmer ─── */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* ─── Gold Line ─── */
+@keyframes goldLine {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+/* ─── Number Count ─── */
+@keyframes numberCount {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ─── Ribbon ─── */
+@keyframes ribbonPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* ─── Applied Animations ─── */
+
+/* Floating About Card */
+.about-float-card {
+  animation: floatCard 4s ease-in-out infinite;
+}
+
+/* Pulse on floating buttons */
+.visit-btn {
+  animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+/* Lightbox open/close */
+.lightbox {
+  animation: fadeIn 0.25s ease;
+}
+
+/* Shimmer on loading images */
+.fp-img.locked {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 400% auto;
+  animation: shimmer 1.8s ease infinite;
+}
+
+/* Navbar scroll transition */
+.navbar {
+  will-change: background, box-shadow;
+}
+
+/* Gold border reveal on section headings */
+.section-heading::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: var(--gold);
+  margin: 16px auto 0;
+  transform-origin: left;
+  animation: goldLine 0.8s ease 0.5s both;
+}
+
+.section-heading.text-center::after {
+  margin: 16px auto 0;
+}
+
+/* Hover scale for gallery items */
+.gallery-item {
+  will-change: transform;
+}
+
+/* Smooth image zoom on about */
+.about-image-frame {
+  will-change: transform;
+}
+
+/* Landmark hover slide */
+.landmark-item {
+  will-change: transform;
+}
+
+/* Card hover lift — shared */
+.highlight-card,
+.amenity-card,
+.fp-card,
+.contact-card {
+  will-change: transform;
+}
+
+/* Float button entrance */
+.floating-btns {
+  animation: fadeInRight 0.6s ease 1.5s both;
+}
+
+/* Back to top transition */
+.back-to-top {
+  will-change: opacity, transform;
+}
+
+/* Swiper slides image zoom effect */
+.hero-slide {
+  will-change: transform;
+  transition: transform 8s ease;
+}
+
+.swiper-slide-active .hero-slide {
+  transform: scale(1.04);
+}
+
+/* ─── AOS Custom Overrides ─── */
+[data-aos] {
+  pointer-events: none;
+}
+
+[data-aos].aos-animate {
+  pointer-events: auto;
+}
+
+/* ─── Scroll reveal utility class (manual) ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal-left.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal-right.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ─── Page Loader (optional) ─── */
+@keyframes loaderBar {
+  0% { width: 0%; }
+  50% { width: 70%; }
+  100% { width: 100%; }
+}
+
+/* ─── Stagger Animation for Grids ─── */
+.highlights-grid .highlight-card:nth-child(1) { transition-delay: 0.05s; }
+.highlights-grid .highlight-card:nth-child(2) { transition-delay: 0.10s; }
+.highlights-grid .highlight-card:nth-child(3) { transition-delay: 0.15s; }
+.highlights-grid .highlight-card:nth-child(4) { transition-delay: 0.20s; }
+.highlights-grid .highlight-card:nth-child(5) { transition-delay: 0.25s; }
+.highlights-grid .highlight-card:nth-child(6) { transition-delay: 0.30s; }
+
+.amenities-grid .amenity-card:nth-child(1)  { transition-delay: 0.03s; }
+.amenities-grid .amenity-card:nth-child(2)  { transition-delay: 0.06s; }
+.amenities-grid .amenity-card:nth-child(3)  { transition-delay: 0.09s; }
+.amenities-grid .amenity-card:nth-child(4)  { transition-delay: 0.12s; }
+.amenities-grid .amenity-card:nth-child(5)  { transition-delay: 0.15s; }
+.amenities-grid .amenity-card:nth-child(6)  { transition-delay: 0.18s; }
+.amenities-grid .amenity-card:nth-child(7)  { transition-delay: 0.21s; }
+.amenities-grid .amenity-card:nth-child(8)  { transition-delay: 0.24s; }
+.amenities-grid .amenity-card:nth-child(9)  { transition-delay: 0.27s; }
+.amenities-grid .amenity-card:nth-child(10) { transition-delay: 0.30s; }
+.amenities-grid .amenity-card:nth-child(11) { transition-delay: 0.33s; }
+.amenities-grid .amenity-card:nth-child(12) { transition-delay: 0.36s; }

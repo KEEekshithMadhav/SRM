@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Disallow admin/script paths
+Disallow: /assets/js/
+Disallow: /.git/
+
+# Sitemap location
+Sitemap: https://smreverest.com/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 10
