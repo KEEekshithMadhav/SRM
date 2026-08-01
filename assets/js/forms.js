@@ -16,7 +16,7 @@
    Replace with your Google Apps Script URL
 ═══════════════════════════════════════════ */
 const GOOGLE_APPS_SCRIPT_URL =
-  'https://script.google.com/macros/s/AKfycbyYbYCvJj_KZ-hlFlQlJnLqkwWReXqeJdAkV844t9A3Tq6FPhRdUCqej1OhZA9ioawc/exec';
+  'https://script.google.com/macros/s/AKfycbycj8qtwmXNsAmZ5zQgNwwl3Y8TzD92L_7-KCu0FLTxezPbfqh-oLEEgoT5thRmGzcYLg/exec';
 
 /* Track which floor plan was clicked */
 let currentFloorPlanIndex = null;
