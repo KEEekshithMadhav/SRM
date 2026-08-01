@@ -135,7 +135,20 @@ function openFullFloorPlanViewer(index, planName) {
   if (!modal) return;
 
   if (title) title.textContent = planName || 'Floor Plan Layout';
-  if (img) img.src = 'images/floor_plan.jpg';
+  if (img) {
+    const cardImg = document.getElementById(`fp-img-${index}`);
+    if (cardImg && cardImg.getAttribute('src')) {
+      img.src = cardImg.getAttribute('src');
+    } else {
+      const fallbackMap = {
+        '0': 'images/4 BHK 3220 Sft.png',
+        '1': 'images/4 BHK 3405 Sft.png',
+        '2': 'images/4 BHK 3550 Sft.png'
+      };
+      img.src = fallbackMap[index] || 'images/4 BHK 3220 Sft.png';
+    }
+    img.alt = planName ? `${planName} Floor Plan Layout` : 'Floor Plan Layout Full';
+  }
 
   modal.style.display = 'flex';
   document.body.style.overflow = 'hidden';
