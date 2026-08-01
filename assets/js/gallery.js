@@ -1,21 +1,22 @@
 /**
  * SMR EVEREST — Custom Lightbox Gallery
- * Masonry layout, keyboard, swipe, lazy loading
+ * Accurate image mapping to real photo content
  */
 
 'use strict';
 
-/* ─── Gallery Data ─── */
+/* ─── Gallery Data — Exact content mapping ─── */
 const galleryData = [
-  { src: 'images/imgi_6_1.jpg',  caption: 'Exterior View' },
-  { src: 'images/imgi_30_3.webp', caption: 'Aerial View & Township' },
-  { src: 'images/imgi_8_4.webp',  caption: 'Luxury Living Spaces' },
-  { src: 'images/imgi_29_1.webp', caption: 'Premium Interiors' },
-  { src: 'images/imgi_9_5.webp',  caption: 'Landscaped Surroundings' },
-  { src: 'images/imgi_3_Entry-plaza.webp', caption: 'Grand Entry Plaza' },
-  { src: 'images/imgi_10_6.webp', caption: 'Clubhouse Facilities' },
-  { src: 'images/imgi_11_1.webp', caption: 'Sports Courts' },
-  { src: 'images/imgi_33_6.webp', caption: '75% Open Green Spaces' },
+  { src: 'images/imgi_3_Entry-plaza.webp', caption: 'Grand Entrance Plaza' },
+  { src: 'images/imgi_11_1.webp',          caption: 'Luxury Living Room' },
+  { src: 'images/imgi_12_2.webp',          caption: 'Dining Hall & Living Suite' },
+  { src: 'images/imgi_13_3.webp',          caption: 'Modular Kitchen' },
+  { src: 'images/imgi_8_4.webp',           caption: 'Master Bedroom Suite' },
+  { src: 'images/imgi_9_5.webp',           caption: 'Guest Bedroom' },
+  { src: 'images/imgi_10_6.webp',          caption: 'Open Air Amphitheatre' },
+  { src: 'images/imgi_33_6.webp',          caption: 'Cricket Arena & Sports Ground' },
+  { src: 'images/imgi_34_7.webp',          caption: 'Central Park & Podium Gardens' },
+  { src: 'images/imgi_29_1.webp',          caption: 'Aerial View & Master Township' },
 ];
 
 let currentLightboxIndex = 0;
@@ -156,7 +157,6 @@ function initLazyImages() {
       if (entry.isIntersecting) {
         const img = entry.target;
 
-        // Already loaded by browser native lazy loading — just add class
         img.classList.add('img-loaded');
         imageObserver.unobserve(img);
       }
@@ -166,7 +166,6 @@ function initLazyImages() {
   });
 
   lazyImages.forEach(img => {
-    // Add loading placeholder style
     img.addEventListener('load', () => img.classList.add('img-loaded'));
     imageObserver.observe(img);
   });
@@ -178,7 +177,7 @@ function initLazyImages() {
   style.textContent = `
     .gallery-item img {
       opacity: 0;
-      transition: opacity 0.4s ease, transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      transition: opacity 0.5s ease, transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
     .gallery-item img.img-loaded,
     .gallery-item img[loading="lazy"]:not([src=""]) {
@@ -199,7 +198,6 @@ function initLazyImages() {
   `;
   document.head.appendChild(style);
 
-  // Immediate load for visible images
   document.querySelectorAll('img').forEach(img => {
     if (img.complete) {
       img.classList.add('img-loaded');

@@ -1,5 +1,5 @@
 /**
- * SMR EVEREST — Main JavaScript
+ * SMR EVEREST — Main JavaScript (Luxury Gold Redesign)
  * Handles: Navbar, Smooth Scroll, Back-to-Top, Master Plan Zoom,
  *           AOS Init, Floating Buttons, General Utilities
  */
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMasterPlanZoom();
   initAOS();
   initKeyboardNavigation();
-  console.log('%c SMR EVEREST 🏛️ ', 'background:#C89B3C;color:#fff;font-size:14px;padding:4px 8px;border-radius:4px;font-weight:bold;');
+  console.log('%c SMR EVEREST ✦ ', 'background:#C89B3C;color:#fff;font-size:14px;padding:4px 8px;border-radius:4px;font-weight:bold;');
 });
 
 /* ═══════════════════════════════════════════
@@ -29,7 +29,6 @@ function initNavbar() {
   if (!navbar) return;
 
   // Scroll state
-  let lastScrollY = 0;
   let ticking = false;
 
   function updateNavbar() {
@@ -41,7 +40,6 @@ function initNavbar() {
       navbar.classList.remove('scrolled');
     }
 
-    lastScrollY = scrollY;
     ticking = false;
   }
 
@@ -130,7 +128,7 @@ function initSmoothScroll() {
       if (!target) return;
 
       e.preventDefault();
-      const navbarH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--navbar-h')) || 80;
+      const navbarH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--navbar-h')) || 84;
       const offsetTop = target.getBoundingClientRect().top + window.scrollY - navbarH;
 
       window.scrollTo({ top: offsetTop, behavior: 'smooth' });
@@ -174,10 +172,10 @@ function initAOS() {
   function tryInitAOS() {
     if (typeof AOS !== 'undefined') {
       AOS.init({
-        duration: 700,
+        duration: 800,
         easing: 'ease-out-cubic',
         once: true,
-        offset: 60,
+        offset: 80,
         delay: 0,
         anchorPlacement: 'top-bottom',
         disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -332,6 +330,9 @@ function mpZoomReset() {
    MODAL HELPERS — Enquiry / Booking
 ═══════════════════════════════════════════ */
 function openEnquiryModal(source) {
+  // Reset brochure flag
+  if (typeof pendingBrochureDownload !== 'undefined') pendingBrochureDownload = false;
+
   // Set source and open lead modal
   const sourceField = document.getElementById('lead-source');
   const planField   = document.getElementById('lead-floor-plan');
@@ -349,6 +350,9 @@ function openEnquiryModal(source) {
 }
 
 function openBookingModal(source) {
+  // Reset brochure flag
+  if (typeof pendingBrochureDownload !== 'undefined') pendingBrochureDownload = false;
+
   const sourceField = document.getElementById('lead-source');
   const planField   = document.getElementById('lead-floor-plan');
   const title       = document.getElementById('lead-modal-title');
@@ -365,7 +369,16 @@ function openBookingModal(source) {
 }
 
 function downloadBrochure() {
-  // Track download intent then open modal
+  // Set brochure download intent flag (used in forms.js)
+  if (typeof pendingBrochureDownload !== 'undefined') {
+    pendingBrochureDownload = true;
+  }
+  // Clear floor plan context
+  if (typeof currentFloorPlanIndex !== 'undefined') {
+    currentFloorPlanIndex = null;
+    currentFloorPlanName = '';
+  }
+
   const sourceField = document.getElementById('lead-source');
   const title       = document.getElementById('lead-modal-title');
   const subtitle    = document.getElementById('lead-modal-subtitle');
@@ -451,6 +464,6 @@ function clearFormErrors(formId) {
 const activeNavStyle = document.createElement('style');
 activeNavStyle.textContent = `
   .nav-link.active { color: var(--gold) !important; }
-  .nav-link.active::after { width: 60% !important; }
+  .nav-link.active::after { width: 50% !important; }
 `;
 document.head.appendChild(activeNavStyle);

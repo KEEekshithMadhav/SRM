@@ -22,6 +22,9 @@ const GOOGLE_APPS_SCRIPT_URL =
 let currentFloorPlanIndex = null;
 let currentFloorPlanName = '';
 let formSubmitted = {};  // Track which floor plans are already unlocked
+let pendingBrochureDownload = false; // Track if user wants brochure
+
+const BROCHURE_PDF_URL = 'smr-broucher - everest.pdf';
 
 document.addEventListener('DOMContentLoaded', () => {
   initLeadForm();
@@ -112,7 +115,7 @@ function unlockFloorPlan(index) {
   if (btn) {
     btn.textContent = '🔍 View Full Floor Plan';
     btn.disabled = false;
-    btn.style.background = 'linear-gradient(135deg, #E52328, #B71C1C)';
+    btn.style.background = 'linear-gradient(135deg, #0B2238, #16385C)';
     btn.style.cursor = 'pointer';
   }
 
@@ -210,14 +213,23 @@ function initLeadForm() {
           unlockFloorPlan(currentFloorPlanIndex);
         }, 500);
       }
+
+      // Auto-trigger brochure download if that was the intent
+      if (pendingBrochureDownload) {
+        setTimeout(() => {
+          triggerBrochureDownload();
+        }, 800);
+      }
     } catch (err) {
       console.error('Submission error:', err);
 
       // On API error, still unlock (demo mode) and show success
-      // In production you may want to handle this differently
       showLeadSuccess();
       if (currentFloorPlanIndex !== null) {
         setTimeout(() => unlockFloorPlan(currentFloorPlanIndex), 500);
+      }
+      if (pendingBrochureDownload) {
+        setTimeout(() => triggerBrochureDownload(), 800);
       }
     } finally {
       setButtonLoading(submitBtn, btnText, btnLoader, false);
@@ -232,18 +244,58 @@ function showLeadSuccess() {
   if (form) form.style.display = 'none';
   if (success) success.style.display = 'block';
 
-  // Wire button in success modal to open the full floor plan viewer
+  // Update success button text based on context
   const closeSuccessBtn = document.getElementById('lead-success-close-btn');
   if (closeSuccessBtn) {
+    if (pendingBrochureDownload) {
+      closeSuccessBtn.textContent = 'Download Brochure';
+    } else if (currentFloorPlanIndex !== null) {
+      closeSuccessBtn.textContent = 'View Floor Plan';
+    } else {
+      closeSuccessBtn.textContent = 'Close';
+    }
     closeSuccessBtn.onclick = handleLeadSuccessClick;
+  }
+
+  // Update success message
+  const successTitle = success?.querySelector('h3');
+  const successMsg = success?.querySelector('p');
+  if (pendingBrochureDownload) {
+    if (successTitle) successTitle.textContent = 'Brochure Ready!';
+    if (successMsg) successMsg.textContent = 'Your exclusive SMR Everest brochure is ready for download.';
+  } else if (currentFloorPlanIndex !== null) {
+    if (successTitle) successTitle.textContent = 'Access Granted!';
+    if (successMsg) successMsg.textContent = 'Your floor plan has been unlocked. Our consultant will call you within 30 minutes.';
+  } else {
+    if (successTitle) successTitle.textContent = 'Thank You!';
+    if (successMsg) successMsg.textContent = 'Our luxury consultant will reach out within 30 minutes.';
   }
 }
 
 function handleLeadSuccessClick() {
-  closeLeadModal();
-  if (currentFloorPlanIndex !== null) {
+  if (pendingBrochureDownload) {
+    triggerBrochureDownload();
+    pendingBrochureDownload = false;
+    closeLeadModal();
+  } else if (currentFloorPlanIndex !== null) {
+    closeLeadModal();
     openFullFloorPlanViewer(currentFloorPlanIndex, currentFloorPlanName);
+  } else {
+    closeLeadModal();
   }
+}
+
+/**
+ * Trigger actual brochure PDF download
+ */
+function triggerBrochureDownload() {
+  const link = document.createElement('a');
+  link.href = BROCHURE_PDF_URL;
+  link.download = 'SMR-Everest-Brochure.pdf';
+  link.target = '_blank';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
 }
 
 /* ═══════════════════════════════════════════

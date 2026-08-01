@@ -1,12 +1,12 @@
 /* ═══════════════════════════════════════════════════════════════
-   SMR EVEREST — Animations & Keyframes
+   SMR EVEREST — Animations & Keyframes (Luxury Gold)
 ═══════════════════════════════════════════════════════════════ */
 
 /* ─── Hero Animations ─── */
 @keyframes heroFadeUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(40px);
   }
   to {
     opacity: 1;
@@ -14,10 +14,15 @@
   }
 }
 
+@keyframes heroZoom {
+  from { transform: scale(1.05); }
+  to { transform: scale(1.12); }
+}
+
 /* ─── Scroll Indicator ─── */
 @keyframes scrollBounce {
   0%, 100% { transform: translateX(-50%) translateY(0); }
-  50% { transform: translateX(-50%) translateY(6px); }
+  50% { transform: translateX(-50%) translateY(8px); }
 }
 
 @keyframes scrollDot {
@@ -108,13 +113,13 @@
 /* ─── Pulse Glow ─── */
 @keyframes pulseGlow {
   0%, 100% { box-shadow: 0 0 0 0 rgba(200, 155, 60, 0.4); }
-  50% { box-shadow: 0 0 0 12px rgba(200, 155, 60, 0); }
+  50% { box-shadow: 0 0 0 14px rgba(200, 155, 60, 0); }
 }
 
 /* ─── Float Card ─── */
 @keyframes floatCard {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+  50% { transform: translateY(-10px); }
 }
 
 /* ─── Shimmer ─── */
@@ -166,9 +171,9 @@
 
 /* Shimmer on loading images */
 .fp-img.locked {
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background: linear-gradient(90deg, #f0f0f0 25%, #e8e5df 50%, #f0f0f0 75%);
   background-size: 400% auto;
-  animation: shimmer 1.8s ease infinite;
+  animation: shimmer 2s ease infinite;
 }
 
 /* Navbar scroll transition */
@@ -183,13 +188,13 @@
   width: 60px;
   height: 2px;
   background: var(--gold);
-  margin: 16px auto 0;
-  transform-origin: left;
+  margin: 18px auto 0;
+  transform-origin: center;
   animation: goldLine 0.8s ease 0.5s both;
 }
 
 .section-heading.text-center::after {
-  margin: 16px auto 0;
+  margin: 18px auto 0;
 }
 
 /* Hover scale for gallery items */
@@ -225,14 +230,9 @@
   will-change: opacity, transform;
 }
 
-/* Swiper slides image zoom effect */
-.hero-slide {
+/* Hero background image zoom */
+.hero-bg {
   will-change: transform;
-  transition: transform 8s ease;
-}
-
-.swiper-slide-active .hero-slide {
-  transform: scale(1.04);
 }
 
 /* ─── AOS Custom Overrides ─── */
@@ -278,13 +278,6 @@
   transform: translateX(0);
 }
 
-/* ─── Page Loader (optional) ─── */
-@keyframes loaderBar {
-  0% { width: 0%; }
-  50% { width: 70%; }
-  100% { width: 100%; }
-}
-
 /* ─── Stagger Animation for Grids ─── */
 .highlights-grid .highlight-card:nth-child(1) { transition-delay: 0.05s; }
 .highlights-grid .highlight-card:nth-child(2) { transition-delay: 0.10s; }
@@ -305,3 +298,4 @@
 .amenities-grid .amenity-card:nth-child(10) { transition-delay: 0.30s; }
 .amenities-grid .amenity-card:nth-child(11) { transition-delay: 0.33s; }
 .amenities-grid .amenity-card:nth-child(12) { transition-delay: 0.36s; }
+.amenities-grid .amenity-card:nth-child(13) { transition-delay: 0.39s; }

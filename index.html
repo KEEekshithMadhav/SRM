@@ -20,7 +20,7 @@
   <meta property="og:title" content="SMR Everest | Luxury Premium Residences" />
   <meta property="og:description"
     content="Experience elevated living at SMR Everest – 12 acres of curated luxury in Hyderabad." />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&q=80" />
+  <meta property="og:image" content="images/hero1.webp" />
   <meta property="og:url" content="https://smreverest.com/" />
   <meta property="og:site_name" content="SMR Everest" />
 
@@ -28,7 +28,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="SMR Everest | Luxury Premium Residences" />
   <meta name="twitter:description" content="12 acres. 4 towers. 40+ amenities. Hyderabad's most exclusive address." />
-  <meta name="twitter:image" content="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&q=80" />
+  <meta name="twitter:image" content="images/hero1.webp" />
 
   <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
@@ -38,7 +38,7 @@
     "name": "SMR Everest",
     "description": "Premium luxury 4 BHK residences in Hyderabad on 12 acres with 4 towers and 40+ world-class amenities.",
     "url": "https://smreverest.com/",
-    "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&q=80",
+    "image": "images/hero1.webp",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Kokapet",
@@ -54,21 +54,16 @@
   </script>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>" />
+  <link rel="icon" type="image/png" href="images/SRM_logo.png" />
 
   <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://images.unsplash.com" />
 
   <!-- Google Fonts -->
   <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Marcellus&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
-
-  <!-- Swiper.js CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <!-- AOS CSS -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
@@ -99,6 +94,7 @@
       <ul class="nav-links" role="list">
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#highlights" class="nav-link">Highlights</a></li>
+        <li><a href="#amenities" class="nav-link">Amenities</a></li>
         <li><a href="#floorplans" class="nav-link">Floor Plans</a></li>
         <li><a href="#gallery" class="nav-link">Gallery</a></li>
         <li><a href="#location" class="nav-link">Location</a></li>
@@ -122,6 +118,7 @@
       <ul role="list">
         <li><a href="#about" class="mobile-link">About</a></li>
         <li><a href="#highlights" class="mobile-link">Highlights</a></li>
+        <li><a href="#amenities" class="mobile-link">Amenities</a></li>
         <li><a href="#floorplans" class="mobile-link">Floor Plans</a></li>
         <li><a href="#gallery" class="mobile-link">Gallery</a></li>
         <li><a href="#location" class="mobile-link">Location</a></li>
@@ -132,64 +129,38 @@
   </nav>
 
   <!-- ═══════════════════════════════════════════════
-       HERO SECTION — Full-Width Slider
+       HERO SECTION — Full-Screen Single Image
   ═══════════════════════════════════════════════ -->
-  <section id="home" class="hero-section" aria-label="Hero slider">
-    <div class="swiper hero-swiper">
-      <div class="swiper-wrapper">
-
-        <!-- Slide 1 -->
-        <div class="swiper-slide">
-          <div class="hero-slide" style="background-image: url('images/hero.webp');">
-            <div class="hero-overlay"></div>
-            <div class="hero-content" data-swiper-parallax="-300">
-              <p class="hero-label">Where Excellence Meets Elevation</p>
-              <h1 class="hero-title">SMR <span class="gold-text">Everest</span></h1>
-              <p class="hero-tagline">Hyderabad's Most Prestigious Address<br />Luxury 4 BHK Residences · Kokapet</p>
-              <div class="hero-actions">
-                <button class="btn btn-gold" onclick="openEnquiryModal('Hero - Enquire Now')"
-                  id="hero-enquire-btn">Enquire Now</button>
-                <button class="btn btn-outline-white" onclick="downloadBrochure()" id="hero-brochure-btn">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 16l-5-5 1.41-1.41L11 13.17V4h2v9.17l2.59-2.58L17 11l-5 5zM4 18h16v2H4v-2z" />
-                  </svg>
-                  Download Brochure
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slide 2 -->
-        <div class="swiper-slide">
-          <div class="hero-slide" style="background-image: url('images/hero1.webp');">
-            <div class="hero-overlay"></div>
-            <div class="hero-content" data-swiper-parallax="-300">
-              <p class="hero-label">22 Acres of Integrated Township</p>
-              <h1 class="hero-title">Live <span class="gold-text">Above</span> All</h1>
-              <p class="hero-tagline">Only 8 Homes Per Floor · G+34 Tower<br />Exclusive 4 BHK + Maid · Starting ₹4 Cr*
-              </p>
-              <div class="hero-actions">
-                <button class="btn btn-gold" onclick="openEnquiryModal('Hero - Slide 2')"
-                  id="hero-enquire-btn-2">Enquire Now</button>
-                <button class="btn btn-outline-white" onclick="downloadBrochure()" id="hero-brochure-btn-2">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 16l-5-5 1.41-1.41L11 13.17V4h2v9.17l2.59-2.58L17 11l-5 5zM4 18h16v2H4v-2z" />
-                  </svg>
-                  Download Brochure
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-      </div><!-- /swiper-wrapper -->
-
-      <!-- Swiper Controls -->
-      <div class="swiper-button-next hero-next" aria-label="Next slide"></div>
-      <div class="swiper-button-prev hero-prev" aria-label="Previous slide"></div>
-      <div class="swiper-pagination hero-pagination" aria-label="Slide indicators"></div>
+  <section id="home" class="hero-section" aria-label="Hero">
+    <div class="hero-bg">
+      <img src="images/SRM HERO.png" alt="SMR Everest luxury towers aerial view" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-label">Where Excellence Meets Elevation</p>
+      <h1 class="hero-title">SMR <span class="gold-text">Everest</span></h1>
+      <p class="hero-subtitle">Hyderabad's Most Prestigious Address<br />Luxury 4 BHK Residences · Kokapet</p>
+      <div class="hero-actions">
+        <button class="btn btn-gold" onclick="openBookingModal('Hero - Book Visit')" id="hero-visit-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+            <line x1="16" y1="2" x2="16" y2="6" />
+            <line x1="8" y1="2" x2="8" y2="6" />
+            <line x1="3" y1="10" x2="21" y2="10" />
+          </svg>
+          Book Site Visit
+        </button>
+        <button class="btn btn-outline-white" onclick="downloadBrochure()" id="hero-brochure-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          Download Brochure
+        </button>
+      </div>
     </div>
 
     <!-- Scroll Indicator -->
@@ -212,8 +183,7 @@
         <!-- Left: Image -->
         <div class="about-image-wrapper" data-aos="fade-right" data-aos-delay="100">
           <div class="about-image-frame">
-            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80"
-              alt="SMR Everest luxury residential towers" loading="lazy" class="about-img" />
+            <img src="images/hero.webp" alt="SMR Everest luxury residential towers" loading="lazy" class="about-img" />
             <div class="about-badge">
               <span class="badge-number">RERA</span>
               <span class="badge-text">Approved</span>
@@ -221,7 +191,13 @@
           </div>
           <!-- Floating accent card -->
           <div class="about-float-card">
-            <div class="float-icon">🏆</div>
+            <div class="float-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="8" r="6" />
+                <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+              </svg>
+            </div>
             <div class="float-content">
               <strong>Award Winning</strong>
               <span>Design Excellence 2024</span>
@@ -299,9 +275,10 @@
 
         <div class="highlight-card" data-aos="fade-up" data-aos-delay="100">
           <div class="highlight-icon">
-            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
-              <rect x="6" y="6" width="36" height="36" rx="2" />
-              <path d="M6 18h36M18 6v36" />
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <path d="M3 9h18M9 3v18" />
             </svg>
           </div>
           <h3 class="highlight-title">Land Area</h3>
@@ -311,10 +288,11 @@
 
         <div class="highlight-card" data-aos="fade-up" data-aos-delay="200">
           <div class="highlight-icon">
-            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
-              <rect x="4" y="20" width="10" height="24" rx="1" />
-              <rect x="19" y="12" width="10" height="32" rx="1" />
-              <rect x="34" y="4" width="10" height="40" rx="1" />
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="2" y="10" width="5" height="12" rx="1" />
+              <rect x="9.5" y="6" width="5" height="16" rx="1" />
+              <rect x="17" y="2" width="5" height="20" rx="1" />
             </svg>
           </div>
           <h3 class="highlight-title">Towers</h3>
@@ -324,12 +302,13 @@
 
         <div class="highlight-card" data-aos="fade-up" data-aos-delay="300">
           <div class="highlight-icon">
-            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
-              <rect x="6" y="4" width="36" height="40" rx="2" />
-              <line x1="6" y1="12" x2="42" y2="12" />
-              <line x1="6" y1="20" x2="42" y2="20" />
-              <line x1="6" y1="28" x2="42" y2="28" />
-              <line x1="6" y1="36" x2="42" y2="36" />
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="4" y="2" width="16" height="20" rx="2" />
+              <line x1="4" y1="6" x2="20" y2="6" />
+              <line x1="4" y1="10" x2="20" y2="10" />
+              <line x1="4" y1="14" x2="20" y2="14" />
+              <line x1="4" y1="18" x2="20" y2="18" />
             </svg>
           </div>
           <h3 class="highlight-title">Floors</h3>
@@ -339,9 +318,10 @@
 
         <div class="highlight-card" data-aos="fade-up" data-aos-delay="400">
           <div class="highlight-icon">
-            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
-              <circle cx="24" cy="24" r="18" />
-              <path d="M24 6v18l12 8" />
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
             </svg>
           </div>
           <h3 class="highlight-title">Possession</h3>
@@ -351,21 +331,23 @@
 
         <div class="highlight-card" data-aos="fade-up" data-aos-delay="500">
           <div class="highlight-icon">
-            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M4 44V24L24 4l20 20v20" />
-              <rect x="18" y="30" width="12" height="14" rx="1" />
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M3 21l1.65-3.8a9 9 0 113.4 2.9L3 21" />
+              <path d="M12 8v4l3 3" />
             </svg>
           </div>
           <h3 class="highlight-title">Clubhouse</h3>
-          <p class="highlight-value">30,000 sq.ft</p>
+          <p class="highlight-value">1,20,000 Sq.Ft</p>
           <p class="highlight-desc">Luxury clubhouse spanning multiple levels</p>
         </div>
 
         <div class="highlight-card" data-aos="fade-up" data-aos-delay="600">
           <div class="highlight-icon">
-            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M24 4l4 8 9 1.3-6.5 6.4 1.5 9L24 24l-8 4.7 1.5-9L11 13.3l9-1.3z" />
-              <circle cx="24" cy="36" r="8" />
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
             </svg>
           </div>
           <h3 class="highlight-title">Premium Amenities</h3>
@@ -376,6 +358,142 @@
       </div><!-- /highlights-grid -->
     </div>
   </section>
+
+  <!-- ═══════════════════════════════════════════════
+       AMENITIES
+  ═══════════════════════════════════════════════ -->
+  <section id="amenities" class="section amenities-section" aria-labelledby="amenities-heading">
+    <div class="container">
+      <div class="section-label" data-aos="fade-up">Lifestyle</div>
+      <h2 id="amenities-heading" class="section-heading text-center" data-aos="fade-up" data-aos-delay="100">
+        World-Class <span class="gold-text">Amenities</span>
+      </h2>
+      <p class="section-subtext text-center" data-aos="fade-up" data-aos-delay="200">
+        Every amenity crafted for the discerning few
+      </p>
+
+      <div class="amenities-grid">
+
+        <!-- 1. Infinity Pool -->
+        <div class="amenity-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="amenity-img-wrapper">
+            <img src="images/pdf_img_16_1_Im139.jpg" alt="Rooftop Infinity Sky Pool" loading="lazy" class="amenity-img">
+          </div>
+          <div class="amenity-body">
+            <h3 class="amenity-name">Rooftop Infinity Sky Pool</h3>
+            <p class="amenity-desc">Rooftop infinity-edge pool with sun lounges & panoramic city skyline views</p>
+          </div>
+        </div>
+
+        <!-- 2. Twin Clubhouses -->
+        <div class="amenity-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="amenity-img-wrapper">
+            <img src="images/pdf_img_18_1_Im154.jpg" alt="Twin Grand Clubhouses" loading="lazy" class="amenity-img">
+          </div>
+          <div class="amenity-body">
+            <h3 class="amenity-name">Twin Grand Clubhouses</h3>
+            <p class="amenity-desc">Club Cooper & Baker providing multi-level sports, banquets, wellness & recreation
+            </p>
+          </div>
+        </div>
+
+        <!-- 3. 2 Mini Cricket Grounds -->
+        <div class="amenity-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="amenity-img-wrapper">
+            <img src="images/pdf_img_10_1_Im94.jpg" alt="2 Mini Cricket Grounds" loading="lazy" class="amenity-img">
+          </div>
+          <div class="amenity-body">
+            <h3 class="amenity-name">Mini Cricket Ground</h3>
+            <p class="amenity-desc">Professional mini cricket stadium with surrounding amphitheatre seating</p>
+          </div>
+        </div>
+
+        <!-- 4. Central Park & Fountains -->
+        <div class="amenity-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="amenity-img-wrapper">
+            <img src="images/pdf_img_8_1_Im81.jpg" alt="Central Park & Fountains" loading="lazy" class="amenity-img">
+          </div>
+          <div class="amenity-body">
+            <h3 class="amenity-name">Central Park & Fountains</h3>
+            <p class="amenity-desc">Monumental central park with national flag post, water fountains & walkways</p>
+          </div>
+        </div>
+
+        <!-- 5. Athletic Running Track -->
+        <div class="amenity-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="amenity-img-wrapper">
+            <img src="images/pdf_img_11_1_Im100.jpg" alt="Athletic Running Track" loading="lazy" class="amenity-img">
+          </div>
+          <div class="amenity-body">
+            <h3 class="amenity-name">Athletic Running Track</h3>
+            <p class="amenity-desc">Synthetic rubberized jogging trail surrounding green parks and outdoor exercise pods
+            </p>
+          </div>
+        </div>
+
+        <!-- 6. High-Altitude Sky Lounge -->
+        <div class="amenity-card" data-aos="fade-up" data-aos-delay="350">
+          <div class="amenity-img-wrapper">
+            <img src="images/imgi_11_1.webp" alt="High-Altitude Sky Lounge" loading="lazy" class="amenity-img">
+          </div>
+          <div class="amenity-body">
+            <h3 class="amenity-name">High-Altitude Sky Lounge</h3>
+            <p class="amenity-desc">High-sky outdoor lounge & party deck for hosting exclusive evening gatherings</p>
+          </div>
+        </div>
+
+        <!-- 7. Children's Play Park -->
+        <div class="amenity-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="amenity-img-wrapper">
+            <img src="images/pdf_img_9_2_Im88.jpg" alt="Children's Play Park" loading="lazy" class="amenity-img">
+          </div>
+          <div class="amenity-body">
+            <h3 class="amenity-name">Children's Play Park</h3>
+            <p class="amenity-desc">Dedicated safe play zones with modern playground equipment & protective grass turf
+            </p>
+          </div>
+        </div>
+
+        <!-- 8. Dolby Mini Theatre -->
+        <div class="amenity-card" data-aos="fade-up" data-aos-delay="450">
+          <div class="amenity-img-wrapper">
+            <img src="images/pdf_img_19_1_Im160.jpg" alt="Private Dolby Mini Theatre" loading="lazy"
+              class="amenity-img">
+          </div>
+          <div class="amenity-body">
+            <h3 class="amenity-name">Private Dolby Mini Theatre</h3>
+            <p class="amenity-desc">Acoustically designed private screening cinema with luxury recliner seating</p>
+          </div>
+        </div>
+
+        <!-- 9. Plaza Iconia Commercial -->
+        <div class="amenity-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="amenity-img-wrapper">
+            <img src="images/pdf_img_24_1_Im218.jpg" alt="Plaza Iconia Commercial" loading="lazy" class="amenity-img">
+          </div>
+          <div class="amenity-body">
+            <h3 class="amenity-name">Plaza Iconia Commercial</h3>
+            <p class="amenity-desc">On-site commercial center with retail boutiques, bank, ATM & daily conveniences</p>
+          </div>
+        </div>
+
+        <!-- 10. Open-Air Amphitheatre -->
+        <div class="amenity-card" data-aos="fade-up" data-aos-delay="550">
+          <div class="amenity-img-wrapper">
+            <img src="images/imgi_10_6.webp" alt="Open-Air Amphitheatre" loading="lazy" class="amenity-img">
+          </div>
+          <div class="amenity-body">
+            <h3 class="amenity-name">Open-Air Amphitheatre</h3>
+            <p class="amenity-desc">Stepped outdoor amphitheatre for cultural shows, performances & community gatherings
+            </p>
+          </div>
+        </div>
+
+      </div><!-- /amenities-grid -->
+    </div>
+  </section>
+
+
 
 
 
@@ -392,107 +510,84 @@
         Register your interest to unlock exclusive floor plans
       </p>
 
-      <div class="floorplans-grid">
+      <div class="floorplans-grid floorplans-grid-3">
 
-        <!-- 3 BHK Standard -->
-        <div class="fp-card" data-aos="fade-up" data-aos-delay="100" data-plan="3 BHK Standard" data-index="0">
-          <div class="fp-card-header">
-            <span class="fp-type">3 BHK</span>
-            <span class="fp-badge">Standard</span>
-          </div>
-          <div class="fp-image-wrap" onclick="openFloorPlanModal(this)" data-plan="3 BHK Standard" data-index="0">
-            <img src="images/floor_plan.jpg" alt="4 BHK 3225 Sq.Ft Floor Plan" loading="lazy" class="fp-img locked"
+        <!-- 4 BHK - 3225 Sq.Ft -->
+        <div class="fp-card" data-aos="fade-up" data-aos-delay="100" data-plan="4 BHK - 3225 Sq.Ft" data-index="0">
+          <div class="fp-image-wrap" onclick="openFloorPlanModal(this)" data-plan="4 BHK - 3225 Sq.Ft" data-index="0">
+            <img src="images/floor_plan.jpg" alt="4 BHK - 3225 Sq.Ft Floor Plan" loading="lazy" class="fp-img locked"
               id="fp-img-0" />
             <div class="fp-blur-overlay" id="fp-blur-0">
               <div class="fp-blur-content">
-                <div class="fp-lock-icon">🔒</div>
+                <div class="fp-lock-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" />
+                    <path d="M7 11V7a5 5 0 0110 0v4" />
+                  </svg>
+                </div>
                 <p>Unlock Floor Plan</p>
               </div>
             </div>
           </div>
-          <div class="fp-card-body">
-            <p class="fp-area">2,250 sq.ft – 2,450 sq.ft</p>
-            <p class="fp-desc">Spacious 3 BHK with dedicated study and staff quarter</p>
-            <button class="btn btn-gold fp-unlock-btn" onclick="openFloorPlanModal(this)" data-plan="3 BHK Standard"
-              data-index="0" id="fp-btn-0">
+          <div class="fp-card-body text-center">
+            <h3 class="fp-title-simple">4 BHK - 3225 Sq.Ft</h3>
+            <button class="btn btn-navy fp-unlock-btn mt-1" onclick="openFloorPlanModal(this)"
+              data-plan="4 BHK - 3225 Sq.Ft" data-index="0" id="fp-btn-0">
               View Floor Plan
             </button>
           </div>
         </div>
 
-        <!-- 3 BHK Premium -->
-        <div class="fp-card" data-aos="fade-up" data-aos-delay="200" data-plan="3 BHK Premium" data-index="1">
-          <div class="fp-card-header">
-            <span class="fp-type">3 BHK</span>
-            <span class="fp-badge fp-badge-gold">Premium</span>
-          </div>
-          <div class="fp-image-wrap" onclick="openFloorPlanModal(this)" data-plan="3 BHK Premium" data-index="1">
-            <img src="images/floor_plan.jpg" alt="4 BHK 3285 Sq.Ft Floor Plan" loading="lazy" class="fp-img locked"
+        <!-- 4 BHK - 3400 Sq.Ft -->
+        <div class="fp-card" data-aos="fade-up" data-aos-delay="200" data-plan="4 BHK - 3400 Sq.Ft" data-index="1">
+          <div class="fp-image-wrap" onclick="openFloorPlanModal(this)" data-plan="4 BHK - 3400 Sq.Ft" data-index="1">
+            <img src="images/floor_plan.jpg" alt="4 BHK - 3400 Sq.Ft Floor Plan" loading="lazy" class="fp-img locked"
               id="fp-img-1" />
             <div class="fp-blur-overlay" id="fp-blur-1">
               <div class="fp-blur-content">
-                <div class="fp-lock-icon">🔒</div>
+                <div class="fp-lock-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" />
+                    <path d="M7 11V7a5 5 0 0110 0v4" />
+                  </svg>
+                </div>
                 <p>Unlock Floor Plan</p>
               </div>
             </div>
           </div>
-          <div class="fp-card-body">
-            <p class="fp-area">2,600 sq.ft – 2,800 sq.ft</p>
-            <p class="fp-desc">Premium 3 BHK with butler's pantry and sky terrace</p>
-            <button class="btn btn-gold fp-unlock-btn" onclick="openFloorPlanModal(this)" data-plan="3 BHK Premium"
-              data-index="1" id="fp-btn-1">
+          <div class="fp-card-body text-center">
+            <h3 class="fp-title-simple">4 BHK - 3400 Sq.Ft</h3>
+            <button class="btn btn-navy fp-unlock-btn mt-1" onclick="openFloorPlanModal(this)"
+              data-plan="4 BHK - 3400 Sq.Ft" data-index="1" id="fp-btn-1">
               View Floor Plan
             </button>
           </div>
         </div>
 
-        <!-- 4 BHK Luxury -->
-        <div class="fp-card" data-aos="fade-up" data-aos-delay="300" data-plan="4 BHK Luxury" data-index="2">
-          <div class="fp-card-header">
-            <span class="fp-type">4 BHK</span>
-            <span class="fp-badge fp-badge-black">Luxury</span>
-          </div>
-          <div class="fp-image-wrap" onclick="openFloorPlanModal(this)" data-plan="4 BHK Luxury" data-index="2">
-            <img src="images/floor_plan.jpg" alt="4 BHK 3405 Sq.Ft Floor Plan" loading="lazy" class="fp-img locked"
+        <!-- 4 BHK - 3550 Sq.Ft -->
+        <div class="fp-card" data-aos="fade-up" data-aos-delay="300" data-plan="4 BHK - 3550 Sq.Ft" data-index="2">
+          <div class="fp-image-wrap" onclick="openFloorPlanModal(this)" data-plan="4 BHK - 3550 Sq.Ft" data-index="2">
+            <img src="images/floor_plan.jpg" alt="4 BHK - 3550 Sq.Ft Floor Plan" loading="lazy" class="fp-img locked"
               id="fp-img-2" />
             <div class="fp-blur-overlay" id="fp-blur-2">
               <div class="fp-blur-content">
-                <div class="fp-lock-icon">🔒</div>
+                <div class="fp-lock-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" />
+                    <path d="M7 11V7a5 5 0 0110 0v4" />
+                  </svg>
+                </div>
                 <p>Unlock Floor Plan</p>
               </div>
             </div>
           </div>
-          <div class="fp-card-body">
-            <p class="fp-area">3,200 sq.ft – 3,600 sq.ft</p>
-            <p class="fp-desc">Ultra-luxury 4 BHK with private pool deck and home theatre</p>
-            <button class="btn btn-gold fp-unlock-btn" onclick="openFloorPlanModal(this)" data-plan="4 BHK Luxury"
-              data-index="2" id="fp-btn-2">
-              View Floor Plan
-            </button>
-          </div>
-        </div>
-
-        <!-- 4 BHK Ultra Premium -->
-        <div class="fp-card" data-aos="fade-up" data-aos-delay="400" data-plan="4 BHK Ultra Premium Penthouse" data-index="3">
-          <div class="fp-card-header">
-            <span class="fp-type">Penthouse</span>
-            <span class="fp-badge fp-badge-gold">Ultra Premium</span>
-          </div>
-          <div class="fp-image-wrap" onclick="openFloorPlanModal(this)" data-plan="4 BHK Ultra Premium Penthouse" data-index="3">
-            <img src="images/floor_plan.jpg" alt="4 BHK 3550 Sq.Ft Floor Plan" loading="lazy" class="fp-img locked"
-              id="fp-img-3" />
-            <div class="fp-blur-overlay" id="fp-blur-3">
-              <div class="fp-blur-content">
-                <div class="fp-lock-icon">🔒</div>
-                <p>Unlock Floor Plan</p>
-              </div>
-            </div>
-          </div>
-          <div class="fp-card-body">
-            <p class="fp-area">5,000+ sq.ft</p>
-            <p class="fp-desc">Exclusive duplex penthouse with rooftop terrace and infinity pool</p>
-            <button class="btn btn-gold fp-unlock-btn" onclick="openFloorPlanModal(this)"
-              data-plan="4 BHK Ultra Premium Penthouse" data-index="3" id="fp-btn-3">
+          <div class="fp-card-body text-center">
+            <h3 class="fp-title-simple">4 BHK - 3550 Sq.Ft</h3>
+            <button class="btn btn-navy fp-unlock-btn mt-1" onclick="openFloorPlanModal(this)"
+              data-plan="4 BHK - 3550 Sq.Ft" data-index="2" id="fp-btn-2">
               View Floor Plan
             </button>
           </div>
@@ -503,7 +598,7 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════
-       GALLERY — Masonry Layout
+       GALLERY — Category-Based
   ═══════════════════════════════════════════════ -->
   <section id="gallery" class="section gallery-section" aria-labelledby="gallery-heading">
     <div class="section-bg-pattern" aria-hidden="true"></div>
@@ -519,48 +614,53 @@
       <div class="gallery-grid" id="galleryGrid" data-aos="fade-up" data-aos-delay="300">
 
         <div class="gallery-item" onclick="openLightbox(0)">
-          <img src="images/imgi_6_1.jpg" alt="SMR Everest exterior view" loading="lazy" />
-          <div class="gallery-overlay"><span>Exterior View</span></div>
+          <img src="images/imgi_3_Entry-plaza.webp" alt="Grand Entrance Plaza" loading="lazy" />
+          <div class="gallery-overlay"><span>Entrance Plaza</span></div>
         </div>
 
         <div class="gallery-item" onclick="openLightbox(1)">
-          <img src="images/imgi_30_3.webp" alt="Community amenities" loading="lazy" />
-          <div class="gallery-overlay"><span>Aerial View & Township</span></div>
+          <img src="images/imgi_11_1.webp" alt="Luxury Living Room" loading="lazy" />
+          <div class="gallery-overlay"><span>Living Room</span></div>
         </div>
 
         <div class="gallery-item" onclick="openLightbox(2)">
-          <img src="images/imgi_8_4.webp" alt="Luxury living spaces" loading="lazy" />
-          <div class="gallery-overlay"><span>Luxury Living Spaces</span></div>
+          <img src="images/imgi_12_2.webp" alt="Dining Hall & Living Suite" loading="lazy" />
+          <div class="gallery-overlay"><span>Dining Suite</span></div>
         </div>
 
         <div class="gallery-item" onclick="openLightbox(3)">
-          <img src="images/imgi_29_1.webp" alt="Premium interiors" loading="lazy" />
-          <div class="gallery-overlay"><span>Premium Interiors</span></div>
+          <img src="images/imgi_13_3.webp" alt="Modular Kitchen" loading="lazy" />
+          <div class="gallery-overlay"><span>Modular Kitchen</span></div>
         </div>
 
         <div class="gallery-item" onclick="openLightbox(4)">
-          <img src="images/imgi_9_5.webp" alt="Landscaped surroundings" loading="lazy" />
-          <div class="gallery-overlay"><span>Landscaped Surroundings</span></div>
+          <img src="images/imgi_8_4.webp" alt="Master Bedroom Suite" loading="lazy" />
+          <div class="gallery-overlay"><span>Master Bedroom</span></div>
         </div>
 
         <div class="gallery-item" onclick="openLightbox(5)">
-          <img src="images/imgi_3_Entry-plaza.webp" alt="Grand Entry Plaza" loading="lazy" />
-          <div class="gallery-overlay"><span>Grand Entry Plaza</span></div>
+          <img src="images/imgi_9_5.webp" alt="Guest Bedroom" loading="lazy" />
+          <div class="gallery-overlay"><span>Guest Bedroom</span></div>
         </div>
 
         <div class="gallery-item" onclick="openLightbox(6)">
-          <img src="images/imgi_10_6.webp" alt="Clubhouse facilities" loading="lazy" />
-          <div class="gallery-overlay"><span>Clubhouse Facilities</span></div>
+          <img src="images/imgi_10_6.webp" alt="Open Air Amphitheatre" loading="lazy" />
+          <div class="gallery-overlay"><span>Amphitheatre</span></div>
         </div>
 
         <div class="gallery-item" onclick="openLightbox(7)">
-          <img src="images/imgi_11_1.webp" alt="Sports courts" loading="lazy" />
-          <div class="gallery-overlay"><span>Sports Courts</span></div>
+          <img src="images/imgi_33_6.webp" alt="Cricket Arena & Sports Ground" loading="lazy" />
+          <div class="gallery-overlay"><span>Cricket Arena</span></div>
         </div>
 
         <div class="gallery-item" onclick="openLightbox(8)">
-          <img src="images/imgi_33_6.webp" alt="Green open spaces" loading="lazy" />
-          <div class="gallery-overlay"><span>75% Open Green Spaces</span></div>
+          <img src="images/imgi_34_7.webp" alt="Central Park & Podium Gardens" loading="lazy" />
+          <div class="gallery-overlay"><span>Central Park</span></div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(9)">
+          <img src="images/imgi_29_1.webp" alt="Aerial View & Master Township" loading="lazy" />
+          <div class="gallery-overlay"><span>Aerial View</span></div>
         </div>
 
       </div><!-- /gallery-grid -->
@@ -614,7 +714,15 @@
           <div class="landmark-list">
 
             <div class="landmark-item">
-              <div class="landmark-icon metro">🚇</div>
+              <div class="landmark-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="4" y="3" width="16" height="18" rx="2" />
+                  <path d="M4 9h16" />
+                  <path d="M4 15h16" />
+                  <line x1="10" y1="3" x2="10" y2="9" />
+                </svg>
+              </div>
               <div class="landmark-content">
                 <strong>Raidurg Metro Station</strong>
                 <span>5 min · 2.5 km</span>
@@ -622,7 +730,13 @@
             </div>
 
             <div class="landmark-item">
-              <div class="landmark-icon school">🏫</div>
+              <div class="landmark-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M4 19.5A2.5 2.5 0 016.5 17H20" />
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" />
+                </svg>
+              </div>
               <div class="landmark-content">
                 <strong>Delhi Public School</strong>
                 <span>8 min · 3.5 km</span>
@@ -630,7 +744,12 @@
             </div>
 
             <div class="landmark-item">
-              <div class="landmark-icon hospital">🏥</div>
+              <div class="landmark-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                </svg>
+              </div>
               <div class="landmark-content">
                 <strong>Yashoda Super Specialty Hospital</strong>
                 <span>12 min · 5 km</span>
@@ -638,7 +757,13 @@
             </div>
 
             <div class="landmark-item">
-              <div class="landmark-icon it">💼</div>
+              <div class="landmark-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="2" y="7" width="20" height="14" rx="2" />
+                  <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" />
+                </svg>
+              </div>
               <div class="landmark-content">
                 <strong>Nanakramguda IT Hub</strong>
                 <span>10 min · 4 km</span>
@@ -646,7 +771,13 @@
             </div>
 
             <div class="landmark-item">
-              <div class="landmark-icon airport">✈️</div>
+              <div class="landmark-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path
+                    d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z" />
+                </svg>
+              </div>
               <div class="landmark-content">
                 <strong>Rajiv Gandhi International Airport</strong>
                 <span>30 min · 22 km</span>
@@ -654,7 +785,14 @@
             </div>
 
             <div class="landmark-item">
-              <div class="landmark-icon mall">🛍️</div>
+              <div class="landmark-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+                  <line x1="3" y1="6" x2="21" y2="6" />
+                  <path d="M16 10a4 4 0 01-8 0" />
+                </svg>
+              </div>
               <div class="landmark-content">
                 <strong>Sarath City Capital Mall</strong>
                 <span>15 min · 7 km</span>
@@ -691,28 +829,52 @@
         <!-- Contact Info Cards -->
         <div class="contact-info">
           <div class="contact-card">
-            <div class="contact-icon">📍</div>
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </div>
             <div class="contact-detail">
               <strong>Address</strong>
               <span>SMR Everest, Kokapet,<br />Hyderabad – 500 075, Telangana</span>
             </div>
           </div>
           <div class="contact-card">
-            <div class="contact-icon">📞</div>
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+              </svg>
+            </div>
             <div class="contact-detail">
               <strong>Phone</strong>
               <span><a href="tel:+919885858529">+91 98858 58529</a></span>
             </div>
           </div>
           <div class="contact-card">
-            <div class="contact-icon">✉️</div>
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+            </div>
             <div class="contact-detail">
               <strong>Email</strong>
-              <span><a href="mailto:sales@smreverest.com">sales@smreverest.com</a></span>
+              <span><a href="mailto:sales@smreverest.com">Info@nexhouz.com</a></span>
             </div>
           </div>
           <div class="contact-card">
-            <div class="contact-icon">🕐</div>
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+            </div>
             <div class="contact-detail">
               <strong>Sales Office Hours</strong>
               <span>Mon – Sun: 10:00 AM – 7:00 PM</span>
@@ -780,7 +942,8 @@
                 <img src="images/NexHouz Logo.png" alt="NexHouz" class="footer-nexhouz-img" />
               </div>
             </a>
-            <p class="footer-tagline">Elevating lives above the ordinary. Hyderabad's most prestigious address for the
+            <p class="footer-tagline">Elevating lives above the ordinary. Hyderabad's most prestigious address for
+              the
               discerning few.</p>
             <div class="social-links">
               <a href="#" class="social-link" aria-label="Facebook">
@@ -834,9 +997,11 @@
           <div class="footer-col">
             <h4 class="footer-heading">Contact</h4>
             <address class="footer-address">
-              <p>SMR Vinay ICONIA — Everest Tower<br />146, Masjid Banda Main Rd,<br />Kondapur, Hyderabad – 500084</p>
+              <p>SMR Vinay ICONIA — Everest Tower<br />146, Masjid Banda Main Rd,<br />Kondapur, Hyderabad –
+                500084</p>
               <p><a href="tel:+919885858529">+91 98858 58529</a></p>
-              <p><a href="https://wa.me/918585854853" target="_blank" rel="noopener">WhatsApp: +91 85858 54853</a></p>
+              <p><a href="https://wa.me/918585854853" target="_blank" rel="noopener">WhatsApp: +91 85858 54853</a>
+              </p>
               <p><a href="mailto:Info@nexhouz.com">Info@nexhouz.com</a></p>
             </address>
           </div>
@@ -863,7 +1028,8 @@
     <div class="footer-bottom">
       <div class="container">
         <p>© 2025 SMR Everest. All rights reserved. | Developed by SMR Holdings Pvt. Ltd.</p>
-        <p class="footer-disclaimer">This website is for informational purposes only. Prices and specifications are
+        <p class="footer-disclaimer">This website is for informational purposes only. Prices and specifications
+          are
           subject to change without notice. Please refer to RERA documents for complete details.</p>
       </div>
     </div>
@@ -902,9 +1068,11 @@
   <!-- ═══════════════════════════════════════════════
        FULL FLOOR PLAN IMAGE VIEWER MODAL
   ═══════════════════════════════════════════════ -->
-  <div class="modal-overlay" id="fpImageModal" role="dialog" aria-modal="true" aria-labelledby="fpFullTitle" style="display:none;">
+  <div class="modal-overlay" id="fpImageModal" role="dialog" aria-modal="true" aria-labelledby="fpFullTitle"
+    style="display:none;">
     <div class="fp-modal-card glass-card">
-      <button class="modal-close" onclick="closeFullFloorPlanViewer()" aria-label="Close floor plan viewer">&times;</button>
+      <button class="modal-close" onclick="closeFullFloorPlanViewer()"
+        aria-label="Close floor plan viewer">&times;</button>
       <div class="fp-modal-header">
         <h3 id="fpFullTitle" class="gold-text">Floor Plan Layout</h3>
         <p>SMR Vinay ICONIA — Everest Tower</p>
@@ -965,7 +1133,14 @@
           </span>
         </button>
 
-        <p class="modal-privacy">🔒 Your details are safe. We never spam.</p>
+        <p class="modal-privacy">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" />
+            <path d="M7 11V7a5 5 0 0110 0v4" />
+          </svg>
+          Your details are safe. We never spam.
+        </p>
       </form>
 
       <!-- Success State -->
@@ -979,7 +1154,9 @@
         </div>
         <h3>Access Granted!</h3>
         <p>Your floor plan has been unlocked. Our consultant will call you within 30 minutes.</p>
-        <button class="btn btn-gold mt-1" onclick="handleLeadSuccessClick()" id="lead-success-close-btn">View Floor Plan</button>
+        <button class="btn btn-gold mt-1" onclick="handleLeadSuccessClick()" id="lead-success-close-btn">View
+          Floor
+          Plan</button>
       </div>
     </div>
   </div>
@@ -994,15 +1171,12 @@
   <!-- ═══════════════════════════════════════════════
        SCRIPTS
   ═══════════════════════════════════════════════ -->
-  <!-- Swiper.js -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
   <!-- AOS -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
   <!-- Custom Scripts -->
   <script src="assets/js/counters.js" defer></script>
   <script src="assets/js/gallery.js" defer></script>
   <script src="assets/js/forms.js" defer></script>
-  <script src="assets/js/slider.js" defer></script>
   <script src="assets/js/main.js" defer></script>
 
 </body>
