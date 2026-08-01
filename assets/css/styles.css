@@ -319,50 +319,48 @@ address { font-style: normal; }
 .nav-logo, .footer-logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   text-decoration: none;
 }
 
 .nav-logo-img {
-  height: 48px;
+  height: 42px;
   width: auto;
   object-fit: contain;
   filter: brightness(0) invert(1);
-  transition: filter var(--transition-med), height var(--transition-med);
+  transition: all var(--transition-med);
 }
 
 .navbar.scrolled .nav-logo-img {
+  height: 38px;
   filter: none;
-  height: 42px;
-}
-
-.nexhouz-logo-badge {
-  background: #FFFFFF;
-  padding: 5px 12px;
-  border-radius: 10px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
-  transition: transform var(--transition-fast);
-}
-
-.nexhouz-logo-badge:hover {
-  transform: scale(1.04);
-}
-
-.nav-nexhouz-img {
-  height: 28px;
-  width: auto;
-  object-fit: contain;
 }
 
 .logo-divider {
-  width: 2px;
-  height: 30px;
-  background: var(--gold);
-  opacity: 0.7;
+  width: 1.5px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.6);
   flex-shrink: 0;
+  transition: all var(--transition-med);
+}
+
+.navbar.scrolled .logo-divider {
+  background: linear-gradient(180deg, transparent, var(--gold), transparent);
+  opacity: 0.9;
+}
+
+.nav-nexhouz-img {
+  height: 34px;
+  width: auto;
+  object-fit: contain;
+  mix-blend-mode: screen;
+  filter: brightness(0) invert(1);
+  transition: all var(--transition-med);
+}
+
+.navbar.scrolled .nav-nexhouz-img {
+  height: 30px;
+  filter: none;
 }
 
 /* Footer logo images */
@@ -375,9 +373,11 @@ address { font-style: normal; }
 }
 
 .footer-nexhouz-img {
-  height: 28px;
+  height: 32px;
   width: auto;
   object-fit: contain;
+  mix-blend-mode: screen;
+  filter: none;
 }
 
 .footer-divider {
@@ -394,13 +394,13 @@ address { font-style: normal; }
 
 .nav-link {
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 1.8px;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.9);
+  color: #FFFFFF;
   padding: 10px 14px;
   border-radius: 6px;
-  transition: all var(--transition-fast);
+  transition: all var(--transition-med);
   position: relative;
 }
 
@@ -412,26 +412,33 @@ address { font-style: normal; }
   transform: translateX(-50%);
   width: 0;
   height: 2px;
-  background: var(--gold);
-  transition: width var(--transition-med);
+  background: #FFFFFF;
+  transition: width var(--transition-med), background var(--transition-med);
   border-radius: 1px;
 }
 
 .nav-link:hover {
-  color: var(--gold);
+  color: var(--gold-light);
 }
 
 .nav-link:hover::after {
   width: 50%;
+  background: var(--gold-light);
 }
 
-/* Scrolled navbar link colors */
+/* Scrolled navbar link colors -> EVERYTHING TURNS GOLDEN ON SCROLL! */
 .navbar.scrolled .nav-link {
-  color: var(--text-dark);
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.navbar.scrolled .nav-link::after {
+  background: var(--gold);
 }
 
 .navbar.scrolled .nav-link:hover {
-  color: var(--gold);
+  color: #FFFFFF;
+  text-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
 }
 
 .nav-cta {
