@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════
-   SMR EVEREST — Animations & Keyframes (Luxury Gold)
+   SMR EVEREST — Animations & Keyframes (Midnight Navy & Silver)
 ═══════════════════════════════════════════════════════════════ */
 
 /* ─── Hero Animations ─── */
@@ -110,10 +110,10 @@
   to { transform: rotate(360deg); }
 }
 
-/* ─── Pulse Glow ─── */
+/* ─── Pulse Glow — Silver tone ─── */
 @keyframes pulseGlow {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(200, 155, 60, 0.4); }
-  50% { box-shadow: 0 0 0 14px rgba(200, 155, 60, 0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(12, 27, 46, 0.30); }
+  50% { box-shadow: 0 0 0 14px rgba(12, 27, 46, 0); }
 }
 
 /* ─── Float Card ─── */
@@ -128,8 +128,8 @@
   100% { background-position: 200% center; }
 }
 
-/* ─── Gold Line ─── */
-@keyframes goldLine {
+/* ─── Silver Line (section heading accent) ─── */
+@keyframes silverLine {
   from { transform: scaleX(0); }
   to { transform: scaleX(1); }
 }
@@ -159,7 +159,7 @@
   animation: floatCard 4s ease-in-out infinite;
 }
 
-/* Pulse on floating buttons */
+/* Pulse on floating buttons — Navy glow */
 .visit-btn {
   animation: pulseGlow 2.5s ease-in-out infinite;
 }
@@ -169,9 +169,9 @@
   animation: fadeIn 0.25s ease;
 }
 
-/* Shimmer on loading images */
+/* Shimmer on loading images — Silver tone */
 .fp-img.locked {
-  background: linear-gradient(90deg, #f0f0f0 25%, #e8e5df 50%, #f0f0f0 75%);
+  background: linear-gradient(90deg, #f0f2f5 25%, #e8ebef 50%, #f0f2f5 75%);
   background-size: 400% auto;
   animation: shimmer 2s ease infinite;
 }
@@ -181,16 +181,16 @@
   will-change: background, box-shadow;
 }
 
-/* Gold border reveal on section headings */
+/* Silver border reveal on section headings */
 .section-heading::after {
   content: '';
   display: block;
   width: 60px;
   height: 2px;
-  background: var(--gold);
+  background: linear-gradient(90deg, var(--navy), var(--navy-light));
   margin: 18px auto 0;
   transform-origin: center;
-  animation: goldLine 0.8s ease 0.5s both;
+  animation: silverLine 0.8s ease 0.5s both;
 }
 
 .section-heading.text-center::after {

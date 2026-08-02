@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════
-   SMR EVEREST — Responsive Styles (Luxury Gold)
+   SMR EVEREST — Responsive Styles (Midnight Navy & Silver)
    Breakpoints: 1200px | 992px | 768px | 576px
 ═══════════════════════════════════════════════════════════════ */
 
@@ -148,6 +148,17 @@
   /* Master Plan */
   .masterplan-container {
     max-width: 100%;
+  }
+
+  /* Hide NexHouz watermarks on tablet */
+  .about-section::after,
+  .highlights-section::after,
+  .amenities-section::after,
+  .floorplans-section::after,
+  .gallery-section::after,
+  .location-section::after,
+  .contact-section::after {
+    display: none;
   }
 }
 
@@ -312,7 +323,7 @@
 @media (hover: none) {
   /* Remove hover-only effects on touch */
   .masterplan-overlay { opacity: 1; }
-  .gallery-overlay { opacity: 1; background: linear-gradient(0deg, rgba(0,0,0,0.45) 0%, transparent 50%); }
+  .gallery-overlay { opacity: 1; background: linear-gradient(0deg, rgba(12,27,46,0.45) 0%, transparent 50%); }
   .float-btn:hover { width: 52px; padding-right: 0; }
   .float-btn:hover span { max-width: 0; }
 }
@@ -336,11 +347,12 @@
   .section { padding: 40px 0; }
 }
 
-/* ─── High Contrast Mode ─── */
+/* ─── High Contrast Mode — Silver/Navy optimized ─── */
 @media (prefers-contrast: high) {
   :root {
-    --gold: #B8860B;
-    --text-muted: #555;
+    --navy: #0A1525;
+    --gold: #95A0B0;
+    --text-muted: #4A5568;
   }
 }
 

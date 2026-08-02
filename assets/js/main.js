@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMasterPlanZoom();
   initAOS();
   initKeyboardNavigation();
-  console.log('%c SMR EVEREST ✦ ', 'background:#C89B3C;color:#fff;font-size:14px;padding:4px 8px;border-radius:4px;font-weight:bold;');
+  console.log('%c SMR EVEREST ✦ ', 'background:#0C1B2E;color:#C8CED8;font-size:14px;padding:4px 8px;border-radius:4px;font-weight:bold;');
 });
 
 /* ═══════════════════════════════════════════
@@ -463,7 +463,7 @@ function clearFormErrors(formId) {
 ═══════════════════════════════════════════ */
 const activeNavStyle = document.createElement('style');
 activeNavStyle.textContent = `
-  .nav-link.active { color: var(--gold) !important; }
-  .nav-link.active::after { width: 50% !important; }
+  .nav-link.active { color: #FFFFFF !important; }
+  .nav-link.active::after { width: 50% !important; background: #FFFFFF !important; }
 `;
 document.head.appendChild(activeNavStyle);
