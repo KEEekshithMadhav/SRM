@@ -463,7 +463,7 @@ function clearFormErrors(formId) {
 ═══════════════════════════════════════════ */
 const activeNavStyle = document.createElement('style');
 activeNavStyle.textContent = `
-  .nav-link.active { color: #FFFFFF !important; }
-  .nav-link.active::after { width: 50% !important; background: #FFFFFF !important; }
+  .nav-link.active { color: var(--copper-primary) !important; }
+  .nav-link.active::after { width: 100% !important; background: var(--copper-primary) !important; }
 `;
 document.head.appendChild(activeNavStyle);

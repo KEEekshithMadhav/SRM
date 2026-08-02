@@ -1,12 +1,13 @@
 /* ═══════════════════════════════════════════════════════════════
-   SMR EVEREST — Animations & Keyframes (Midnight Navy & Silver)
+   SMR EVEREST — Architectural Micro-Interactions & Animations
+   Burnished Copper & Charcoal Design System
 ═══════════════════════════════════════════════════════════════ */
 
-/* ─── Hero Animations ─── */
+/* ─── Hero Entrance ─── */
 @keyframes heroFadeUp {
   from {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
@@ -14,21 +15,22 @@
   }
 }
 
-@keyframes heroZoom {
-  from { transform: scale(1.05); }
-  to { transform: scale(1.12); }
+/* ─── Pulse Glow — Copper tone ─── */
+@keyframes pulseGlowCopper {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(200, 125, 85, 0.35); }
+  50% { box-shadow: 0 0 0 12px rgba(200, 125, 85, 0); }
 }
 
-/* ─── Scroll Indicator ─── */
-@keyframes scrollBounce {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50% { transform: translateX(-50%) translateY(8px); }
+/* ─── Float Card Animation ─── */
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
 
-@keyframes scrollDot {
-  0% { opacity: 1; transform: translateY(0); }
-  80% { opacity: 0; transform: translateY(12px); }
-  100% { opacity: 0; transform: translateY(0); }
+/* ─── Shimmer ─── */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
 }
 
 /* ─── Fade In ─── */
@@ -41,47 +43,11 @@
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-/* ─── Fade In Left ─── */
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/* ─── Fade In Right ─── */
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/* ─── Scale In ─── */
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.85);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
   }
 }
 
@@ -89,7 +55,7 @@
 @keyframes modalSlideIn {
   from {
     opacity: 0;
-    transform: scale(0.92) translateY(20px);
+    transform: scale(0.95) translateY(15px);
   }
   to {
     opacity: 1;
@@ -97,205 +63,62 @@
   }
 }
 
-/* ─── Success Pop ─── */
-@keyframes successPop {
-  0% { transform: scale(0); }
-  70% { transform: scale(1.15); }
-  100% { transform: scale(1); }
-}
-
-/* ─── Spin (Loader) ─── */
+/* ─── Spinner (Loader) ─── */
 @keyframes spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
 
-/* ─── Pulse Glow — Silver tone ─── */
-@keyframes pulseGlow {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(12, 27, 46, 0.30); }
-  50% { box-shadow: 0 0 0 14px rgba(12, 27, 46, 0); }
-}
-
-/* ─── Float Card ─── */
-@keyframes floatCard {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-/* ─── Shimmer ─── */
-@keyframes shimmer {
-  0% { background-position: -200% center; }
-  100% { background-position: 200% center; }
-}
-
-/* ─── Silver Line (section heading accent) ─── */
-@keyframes silverLine {
-  from { transform: scaleX(0); }
-  to { transform: scaleX(1); }
-}
-
-/* ─── Number Count ─── */
-@keyframes numberCount {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ─── Ribbon ─── */
-@keyframes ribbonPulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.7; }
-}
-
-/* ─── Applied Animations ─── */
-
-/* Floating About Card */
+/* ─── Applied Micro-Interactions ─── */
 .about-float-card {
   animation: floatCard 4s ease-in-out infinite;
 }
 
-/* Pulse on floating buttons — Navy glow */
 .visit-btn {
-  animation: pulseGlow 2.5s ease-in-out infinite;
+  animation: pulseGlowCopper 2.8s ease-in-out infinite;
 }
 
-/* Lightbox open/close */
+.modal-card,
+.mp-modal-card {
+  animation: modalSlideIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
 .lightbox {
   animation: fadeIn 0.25s ease;
 }
 
-/* Shimmer on loading images — Silver tone */
+/* Shimmer on locked images */
 .fp-img.locked {
-  background: linear-gradient(90deg, #f0f2f5 25%, #e8ebef 50%, #f0f2f5 75%);
+  background: linear-gradient(90deg, #F3F1EC 25%, #E8E4DD 50%, #F3F1EC 75%);
   background-size: 400% auto;
-  animation: shimmer 2s ease infinite;
+  animation: shimmer 2.5s ease infinite;
 }
 
-/* Navbar scroll transition */
 .navbar {
   will-change: background, box-shadow;
 }
 
-/* Silver border reveal on section headings */
-.section-heading::after {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 2px;
-  background: linear-gradient(90deg, var(--navy), var(--navy-light));
-  margin: 18px auto 0;
-  transform-origin: center;
-  animation: silverLine 0.8s ease 0.5s both;
-}
-
-.section-heading.text-center::after {
-  margin: 18px auto 0;
-}
-
-/* Hover scale for gallery items */
-.gallery-item {
-  will-change: transform;
-}
-
-/* Smooth image zoom on about */
-.about-image-frame {
-  will-change: transform;
-}
-
-/* Landmark hover slide */
-.landmark-item {
-  will-change: transform;
-}
-
-/* Card hover lift — shared */
+.gallery-item,
+.about-image-frame,
 .highlight-card,
 .amenity-card,
 .fp-card,
 .contact-card {
-  will-change: transform;
+  will-change: transform, box-shadow;
 }
 
-/* Float button entrance */
-.floating-btns {
-  animation: fadeInRight 0.6s ease 1.5s both;
-}
-
-/* Back to top transition */
 .back-to-top {
   will-change: opacity, transform;
 }
 
-/* Hero background image zoom */
-.hero-bg {
-  will-change: transform;
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
-
-/* ─── AOS Custom Overrides ─── */
-[data-aos] {
-  pointer-events: none;
-}
-
-[data-aos].aos-animate {
-  pointer-events: auto;
-}
-
-/* ─── Scroll reveal utility class (manual) ─── */
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.reveal.revealed {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.reveal-left {
-  opacity: 0;
-  transform: translateX(-40px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.reveal-left.revealed {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.reveal-right {
-  opacity: 0;
-  transform: translateX(40px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.reveal-right.revealed {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-/* ─── Stagger Animation for Grids ─── */
-.highlights-grid .highlight-card:nth-child(1) { transition-delay: 0.05s; }
-.highlights-grid .highlight-card:nth-child(2) { transition-delay: 0.10s; }
-.highlights-grid .highlight-card:nth-child(3) { transition-delay: 0.15s; }
-.highlights-grid .highlight-card:nth-child(4) { transition-delay: 0.20s; }
-.highlights-grid .highlight-card:nth-child(5) { transition-delay: 0.25s; }
-.highlights-grid .highlight-card:nth-child(6) { transition-delay: 0.30s; }
-
-.amenities-grid .amenity-card:nth-child(1)  { transition-delay: 0.03s; }
-.amenities-grid .amenity-card:nth-child(2)  { transition-delay: 0.06s; }
-.amenities-grid .amenity-card:nth-child(3)  { transition-delay: 0.09s; }
-.amenities-grid .amenity-card:nth-child(4)  { transition-delay: 0.12s; }
-.amenities-grid .amenity-card:nth-child(5)  { transition-delay: 0.15s; }
-.amenities-grid .amenity-card:nth-child(6)  { transition-delay: 0.18s; }
-.amenities-grid .amenity-card:nth-child(7)  { transition-delay: 0.21s; }
-.amenities-grid .amenity-card:nth-child(8)  { transition-delay: 0.24s; }
-.amenities-grid .amenity-card:nth-child(9)  { transition-delay: 0.27s; }
-.amenities-grid .amenity-card:nth-child(10) { transition-delay: 0.30s; }
-.amenities-grid .amenity-card:nth-child(11) { transition-delay: 0.33s; }
-.amenities-grid .amenity-card:nth-child(12) { transition-delay: 0.36s; }
-.amenities-grid .amenity-card:nth-child(13) { transition-delay: 0.39s; }
