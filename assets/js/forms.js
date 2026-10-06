@@ -13,10 +13,12 @@
 
 /* ═══════════════════════════════════════════
    CONFIGURATION
-   Replace with your Google Apps Script URL
 ═══════════════════════════════════════════ */
 const GOOGLE_APPS_SCRIPT_URL =
   'https://script.google.com/macros/s/AKfycbycj8qtwmXNsAmZ5zQgNwwl3Y8TzD92L_7-KCu0FLTxezPbfqh-oLEEgoT5thRmGzcYLg/exec';
+
+const WYLTO_WEBHOOK_URL =
+  'https://server.wylto.com/webhook/ZXd6Pgnj8ASPwd43yO';
 
 /* Track which floor plan was clicked */
 let currentFloorPlanIndex = null;
@@ -395,7 +397,7 @@ async function submitToGoogleSheets(payload) {
     };
 
   } catch (error) {
-    console.error("❌ Failed to submit lead:", error);
+    console.error("❌ Failed to submit lead to Google Sheets:", error);
 
     return {
       status: "error",
@@ -403,6 +405,61 @@ async function submitToGoogleSheets(payload) {
     };
   }
 }
+
+/* ==========================================
+   SUBMIT LEAD TO WYLTO CRM WEBHOOK
+========================================== */
+
+function formatPhoneNumber(phone) {
+  if (!phone) return '';
+  const digits = phone.toString().replace(/\D/g, '');
+  if (digits.length === 10) {
+    return `+91${digits}`;
+  }
+  if (digits.length === 12 && digits.startsWith('91')) {
+    return `+${digits}`;
+  }
+  return phone.toString().startsWith('+') ? phone.toString().trim() : `+${digits}`;
+}
+
+async function submitToWylto(data) {
+  try {
+    const formattedPhone = formatPhoneNumber(data.phone || data.phoneNumber);
+
+    const payload = {
+      name: (data.name || '').trim(),
+      phoneNumber: formattedPhone
+    };
+
+    if (data.email) payload.email = data.email.trim();
+    if (data.city) payload.city = data.city.trim();
+    if (data.source) payload.source = data.source;
+    if (data.floorPlan) payload.floorPlan = data.floorPlan;
+    if (data.message) payload.message = data.message.trim();
+
+    const response = await fetch(WYLTO_WEBHOOK_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    });
+
+    console.log('✅ Lead submitted to Wylto webhook:', response.status);
+
+    return {
+      status: 'success'
+    };
+  } catch (error) {
+    console.error('❌ Failed to submit to Wylto webhook:', error);
+
+    return {
+      status: 'error',
+      message: error.message
+    };
+  }
+}
+
 
 /* ═══════════════════════════════════════════
    FORM VALIDATION

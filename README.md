@@ -67,39 +67,83 @@ Then visit: `http://localhost:8080`
 3. Paste this code:
 
 ```javascript
-const SHEET_ID = 'YOUR_GOOGLE_SHEET_ID'; // from the sheet URL
+const WYLTO_WEBHOOK_URL = 'https://server.wylto.com/webhook/ZXd6Pgnj8ASPwd43yO';
 
 function doPost(e) {
   try {
-    const data = JSON.parse(e.postData.contents);
-    const sheet = SpreadsheetApp.openById(SHEET_ID).getSheetByName('Sheet1');
+    // 1. Connects directly to the active sheet
+    var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+    var data = {};
 
-    sheet.appendRow([
-      data.timestamp || new Date().toISOString(),
-      data.name      || '',
-      data.phone     || '',
-      data.email     || '',
-      data.city      || '',
-      data.source    || '',
-      data.floorPlan || '',
-      data.message   || '',
-    ]);
+    // 2. Parse incoming payload safely
+    if (e && e.postData && e.postData.contents) {
+      try {
+        data = JSON.parse(e.postData.contents);
+      } catch (err) {
+        data = e.parameter || {};
+      }
+    } else if (e && e.parameter) {
+      data = e.parameter;
+    }
 
-    return ContentService
-      .createTextOutput(JSON.stringify({ status: 'success' }))
+    var timestamp = data.timestamp || new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" });
+    var name      = data.name || "";
+    var phone     = data.phone || "";
+    var email     = data.email || "";
+    var city      = data.city || "";
+    var source    = data.source || "Website Lead";
+    var floorPlan = data.floorPlan || "";
+    var message   = data.message || "";
+
+    // 3. Appends matching your Sheet columns
+    sheet.appendRow([timestamp, name, phone, email, city, floorPlan || source, message]);
+
+    // 4. Forward to Wylto CRM Webhook
+    try {
+      var rawDigits = (phone || "").toString().replace(/\D/g, "");
+      var formattedPhone = "";
+      if (rawDigits.length === 10) {
+        formattedPhone = "+91" + rawDigits;
+      } else if (rawDigits.length === 12 && rawDigits.indexOf("91") === 0) {
+        formattedPhone = "+" + rawDigits;
+      } else if (phone && phone.toString().indexOf("+") === 0) {
+        formattedPhone = phone.toString();
+      } else {
+        formattedPhone = rawDigits ? "+" + rawDigits : "";
+      }
+
+      var wyltoPayload = {
+        name: name,
+        phoneNumber: formattedPhone
+      };
+
+      if (email) wyltoPayload.email = email;
+      if (city) wyltoPayload.city = city;
+      if (source) wyltoPayload.source = source;
+      if (floorPlan) wyltoPayload.floorPlan = floorPlan;
+      if (message) wyltoPayload.message = message;
+
+      UrlFetchApp.fetch(WYLTO_WEBHOOK_URL, {
+        method: "post",
+        contentType: "application/json",
+        payload: JSON.stringify(wyltoPayload),
+        muteHttpExceptions: true
+      });
+    } catch (webhookErr) {
+      Logger.log("Wylto webhook error: " + webhookErr.toString());
+    }
+
+    return ContentService.createTextOutput(JSON.stringify({ status: "success" }))
       .setMimeType(ContentService.MimeType.JSON);
 
-  } catch (err) {
-    return ContentService
-      .createTextOutput(JSON.stringify({ status: 'error', message: err.message }))
+  } catch (error) {
+    return ContentService.createTextOutput(JSON.stringify({ status: "error", error: error.toString() }))
       .setMimeType(ContentService.MimeType.JSON);
   }
 }
 
 function doGet(e) {
-  return ContentService
-    .createTextOutput('SMR Everest API is running.')
-    .setMimeType(ContentService.MimeType.TEXT);
+  return ContentService.createTextOutput("SMR Everest API is active!");
 }
 ```
 
@@ -118,6 +162,36 @@ const GOOGLE_APPS_SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
 With your deployed URL:
 ```javascript
 const GOOGLE_APPS_SCRIPT_URL = 'https://script.google.com/macros/s/YOUR_ID/exec';
+```
+
+---
+
+## ⚡ Wylto CRM Webhook Integration
+
+Leads captured via both the Lead Modal (floor plans, site visits, brochure downloads) and the Contact Form are dispatched to Wylto CRM via webhook.
+
+### Webhook Endpoint:
+```
+POST https://server.wylto.com/webhook/ZXd6Pgnj8ASPwd43yO
+Content-Type: application/json
+```
+
+### Payload Structure:
+```json
+{
+  "name": "Full Name",
+  "phoneNumber": "+919987543210",
+  "email": "user@example.com",
+  "city": "Hyderabad",
+  "source": "Lead Modal / Floor Plan Modal / Contact Form",
+  "floorPlan": "4 BHK 3220 Sft",
+  "message": "Optional user query"
+}
+```
+
+Configured in [forms.js](file:///d:/NexHouz/SMR%20Everest/assets/js/forms.js):
+```javascript
+const WYLTO_WEBHOOK_URL = 'https://server.wylto.com/webhook/ZXd6Pgnj8ASPwd43yO';
 ```
 
 ---
